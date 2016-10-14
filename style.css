@@ -1,0 +1,15 @@
+.header{
+		position:absolute;
+		top:0px;
+		left:0px;
+		right:0px;
+		background-color:gray;
+		font-family:arial;
+		}
+		
+.top_header:link,.top_header:visited{
+
+			color:white;
+			text-decoration:none;
+		
+}
