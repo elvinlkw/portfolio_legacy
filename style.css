@@ -1,0 +1,90 @@
+#top-section{
+    height:100%;
+    margin:0;
+    border-bottom:1px black solid;
+}
+body{
+    margin:0 auto;
+    padding:0;
+    font-family: helvetica, Arial, sans-serif;
+}
+
+#img-container{
+    width:29%;
+    height:100%;
+    /*background-color:#2D2E2E;*/
+    border-right: 1px black solid;
+    float:left;
+}
+
+#profile-img{
+    border-radius:50%;
+    width:300px;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#name-section{
+    width:70%;
+    height:100%;
+    /*background-color:#2B2C2C;*/
+    float:left;
+}
+
+#name-container{
+    width:80%;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -80%);
+}
+
+.clear-float{
+    clear:both;
+}
+
+#name-separator{
+    width:80%;
+    position:relative;
+    top:300px;
+}
+
+.name-text{
+    font-size:350%;
+    margin:0;
+}
+
+#job-title{
+    margin-top:10px;
+    font-weight:normal;
+}
+
+#contact-container{
+    position:relative;
+    width:80%;
+    margin: 0 auto;
+    top: 300px;
+}
+
+#location{
+    float:left;
+    font-size:80%;
+    width:25%;
+}
+
+.tag{
+    float:left;
+    width:25%;  
+    font-size:80%;
+}
+
+a{
+    color:black;
+}
+
+.contact-header{
+    font-weight:bold;
+}
+
