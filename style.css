@@ -6,6 +6,7 @@
 body{
     margin:0 auto;
     padding:0;
+    overflow-x:hidden;
     font-family: helvetica, Arial, sans-serif;
 }
 
@@ -16,6 +17,24 @@ body{
     position:fixed;
     background-color:white;
     z-index:10;
+}
+
+#phoenix-icon{
+    width:3%;
+    float:right;
+    position:relative;
+    z-index:1;
+    right:6%;
+    top:-5%;
+}
+
+#sts-icon{
+    width:8%;
+    float:right;
+    position: relative;
+    top:-39%;
+    right:5%;
+    z-index:2;
 }
 
 #icon-container{
