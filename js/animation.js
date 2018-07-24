@@ -1,5 +1,16 @@
-$(".arrow-right").click(function(){
+var arrow = $(".arrow-right");
+var settings = $("#navy");
+
+arrow.click(function(){
     $(this).toggleClass("rotated");
+    
+    $("#hon").css("display", "block");
+});
+
+settings.hover(function(){
+    $("#navbar").css("display", "block");
+    }, function(){
+        $("#navbar").css("display", "none");
 });
 
 function animateText(){
