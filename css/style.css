@@ -2,7 +2,7 @@
 body{
     margin:0 auto;
     padding:0;
-    overflow:hidden;
+    overflow-x:hidden;
     font-family: 'Lato', helvetica, Arial, sans-serif;
 }
 
@@ -10,8 +10,6 @@ body{
     width:100%;
     height:8%;
     margin: 0 auto;
-    position:fixed;
-    background-color:white;
     z-index:10;
 }
 
@@ -36,18 +34,36 @@ body{
 #main-section-container{
     height:100%;
     margin:0;
-    border-bottom:1px black solid;
     display:flex;
     flex-direction:row;
 }
 
 #icon-container{
     width:80%;
-    position:fixed;
     height:8%;
     left:10%;
     z-index:11;
     border-bottom:2px black solid;
+    display:flex;
+    flex-direction:row-reverse;
+}
+
+.icon-subcontainer{
+    width:10%;
+    text-align:center;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.icon-text{
+    position:relative;
+    top:30%;
+    text-decoration:none;
+
+}
+
+.icon-text:hover{
+    color:darksalmon;
 }
 
 #img-container{
@@ -85,10 +101,6 @@ body{
     width:80%;
     position:relative;
     top:45%;
-}
-
-#typing-animation{
-
 }
 
 .name-text{
@@ -129,6 +141,59 @@ a{
     font-weight:bold;
 }
 
+#about-me-section{
+    width:100%;
+    height:100%;
+    background-color:lightcoral;
+}
+
+.header-container{
+    position:relative;
+    top:8%;
+    left:10%;
+    width:70%;
+}
+
+#about-me-animation{
+    font-weight: bold;
+    font-size:120%;
+}
+
+.header-content{
+    font-size:200%;
+    display:inline-block;
+    flex-direction:column;
+    border-bottom:2px black solid;
+}
+
+#skills-section{
+    width:100%;
+    height:100%;
+    background-color:lightgreen;
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.arrow-right{
+    width:0;
+    height:0;
+    border-top:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-left:8px solid black;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow-right.rotated{
+    -webkit-transform: rotate(90deg);
+    -moz-transform : rotate(90deg); 
+    -ms-transform : rotate(90deg); 
+    -o-transform : rotate(90deg); 
+    transform : rotate(90deg); 
+}
 
 @media (max-width:800px){
     #top-section{
