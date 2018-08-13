@@ -20,7 +20,6 @@
         
 
     </section>
-
     <section id="main-section-container">
         <div id="img-container">
             <img id="profile-img"src="Images/index.png">
@@ -32,30 +31,29 @@
                 <h3 id="job-title">Front-End Web Developer</h3>
                 <span id="typing-animation"></span>
             </div>
-            <hr id="name-separator">
             <div id="contact-container">
                 <div id="location">
                     <p class="contact-header">Location</p>
-                    <p>Toronto, ON</p>
+                    <p class="contact-text">Toronto, ON</p>
                 </div>
                 <div class="tag" id="phone">
                     <p class="contact-header">Phone</p>
-                    <p>(226)-339-4420</p>
+                    <p class="contact-text">(226)-339-4420</p>
                 </div>
                 <div class="tag" id="website">
                     <p class="contact-header">Website</p>
-                    <a href="https://elvinlkw.github.io/" target="_blank">elvinlkw.github.io</a>
+                    <a class="contact-text" href="https://elvinlkw.github.io/" target="_blank">elvinlkw.github.io</a>
                 </div>
                 <div class="tag" id="email">
                     <p class="contact-header">Email</p>
-                    <a href="mailto:elvinlkw@hotmail.com">elvinlkw@hotmail.com</a>
+                    <a class="contact-text" href="mailto:elvinlkw@hotmail.com">elvinlkw@hotmail.com</a>
                 </div>
             </div>           
         </div>
     </section>
 
     <section id="about-me-section">
-        <div class="header-container">
+        <div class="wrapper-container">
             <h1 class="header-content">About Me</h1><br>
             <span id="about-me-animation"></span>
             <p>I recently graduated from the University of Waterloo with a Bachelor of Electrical Engineering
@@ -66,21 +64,47 @@
     </section>
 
     <section id="skills-section">
-        <div class="header-container">
+        <div class="wrapper-container">
             <h1 class="header-content">Experience</h1><br>
-            <div class="skill-header">
-                <div class="arrow-right"></div>
-                <span class="skill-text">Skill</span>
-                <div id="hon"></div>
+            <label class="switch">
+                <input class="toggle-button" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <div class="skill-wrapper"> 
+                <div class="arrow-wrapper">
+                    <div class="arrow-right"></div>
+                    <span class="skill-text">Skill</span>
+                </div>
+                <div class="arrow-content">
+                    <p>Frontend :  HTML, CSS, Javascript (jQuery)</p>
+                    <p>Languages : Python, SQL</p>
+                    <p>Operating Systems : Windows, Linux</p>
+                    <p>Software : Git, SVN, JIRA</p>
+                    <p>Bilingual : English, French</p>
+                </div>
+                <br>
             </div>
-            <div class="skill-header">
-                <div class="arrow-right"></div>
-                <span class="skill-text">Work Experience</span>
-                <div id="hon2"></div>
+            <div class="skill-wrapper">
+                <div class="arrow-wrapper">
+                    <div class="arrow-right"></div>
+                    <span class="skill-text">Work Experience</span>
+                </div>
+                <div class="arrow-content">
+                    <p>Barrick Gold : Systems Analyst, {Sept 17 - Dec 17}</p>
+                    <p>T4G Ltd : Internal Infrastructure Specialist, {Jan 17 - Apr 17}</p>
+                </div>
+                <br/>
             </div>
-            <div class="skill-header">
-                <div class="arrow-right"></div>
-                <span class="skill-text">Education</span>
+            <div class="skill-wrapper">
+                <div class="arrow-wrapper">
+                    <div class="arrow-right"></div>
+                    <span class="skill-text">Education</span>
+                </div>
+                <div class="arrow-content">
+                    <p>University of Waterloo, Ontario, Canada</p>
+                    <p>BSc, Honors Electrical Engineering</p>
+                    <p>Graduated in 2018</p>
+                </div>
             </div>
         </div>
     </section>
