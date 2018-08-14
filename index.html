@@ -15,28 +15,32 @@
 
 </head>
 <body style="display:block">
-    <img id="navy" src="Images/index.png">
+    <img id="navy" src="Images/menu-icon.png">
     <section id="navbar">
         <div id="navbar-header">
             
         </div>
         <div class="menu-container">
-            <div class="menu">
+            <a href="#home" class="menu-click"><div class="menu">
                 <div class="arrow-fade-in"></div>
                 <p class="menu-text">HOME</p>
-            </div>
-            <div class="menu">
+            </div></a>
+            <a href="#about" class="menu-click"><div class="menu">
                 <div class="arrow-fade-in"></div>
                 <p class="menu-text">ABOUT ME</p>
-            </div>
-            <div class="menu">
+            </div></a>
+            <a href="#skills-section" class="menu-click"><div class="menu">
                 <div class="arrow-fade-in"></div>
                 <p class="menu-text">EXPERIENCE</p>
-            </div>
+            </div></a>
+            <a href="#contact-section" class="menu-click"><div class="menu">
+                <div class="arrow-fade-in"></div>
+                <p class="menu-text">CONTACT</p>
+            </div></a>
         </div>
 
     </section>
-    <section id="main-section-container">
+    <section id="main-section-container"><a name="home"></a>
         <div id="img-container">
             <img id="profile-img"src="Images/index.png">
         </div>
@@ -68,7 +72,7 @@
         </div>
     </section>
 
-    <section id="about-me-section">
+    <section id="about-me-section"><a name="about"></a>
         <div class="wrapper-container">
             <h1 class="header-content">About Me</h1><br>
             <span id="about-me-animation"></span>
@@ -89,14 +93,14 @@
             <div class="skill-wrapper"> 
                 <div class="arrow-wrapper">
                     <div class="arrow-right"></div>
-                    <span class="skill-text">Skill</span>
+                    <span class="skill-text">Skills</span>
                 </div>
                 <div class="arrow-content">
-                    <p><u>Frontend</u> :  HTML, CSS, Javascript (jQuery)</p>
-                    <p><u>Languages</u> : Python, SQL</p>
-                    <p><u>Operating Systems</u> : Windows, Linux</p>
-                    <p><u>Software</u> : Git, SVN, JIRA</p>
-                    <p><u>Bilingual</u> : English, French</p>
+                    <p><strong>Frontend</strong> :  HTML, CSS, Javascript (jQuery)</p>
+                    <p><strong>Languages</strong> : Python, SQL</p>
+                    <p><strong>Operating Systems</strong> : Windows, Linux</p>
+                    <p><strong>Software</strong> : Git, SVN, JIRA</p>
+                    <p><strong>Bilingual</strong> : English, French</p>
                 </div>
                 <br>
             </div>
@@ -122,6 +126,12 @@
                     <p>Graduated in 2018</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="contact-section">
+        <div class="wrapper-container">
+            <h1 class="header-content">Contact</h1>
         </div>
     </section>
 
