@@ -1,13 +1,29 @@
 
 var settings = $("#navy");
 
+$("#navbar").hide();
+
 //menubar
 settings.hover(function(){
-    $("#navbar").css("display", "block");
-    }, function(){
-        $("#navbar").css("display", "none");
+    $("#navbar").slideDown('slow');
 });
 
+var menu = $(".menu");
+
+menu.hover(function(){
+    $(this).find(".arrow-fade-in").css("opacity","1");
+        }, function(){
+            $(this).find(".arrow-fade-in").css("opacity","0");
+    
+});
+
+$("#navbar").hover(function(){
+    $("#navbar").css({
+        "opacity": "1",
+        "visibility": "visible"});
+    }, function(){
+        $("#navbar").slideUp('slow');
+});
 
 //arrow
 var arrow = $(".arrow-right");
@@ -19,7 +35,7 @@ arrow.click(function(){
     }else{
         $(this).toggleClass("rotated");
 
-        $(".arrow-content").slideToggle();    
+        $(this).closest('.skill-wrapper').find('.arrow-content').slideToggle();
     }
 
 });

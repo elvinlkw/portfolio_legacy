@@ -1,4 +1,3 @@
-
 body{
     margin:0 auto;
     padding:0;
@@ -7,12 +6,49 @@ body{
 }
 
 #navbar{
-    width:15%;
+    width:13%;
     height:100%;
-    background-color:dodgerblue;
+    background-color:peachpuff;
     position:fixed;
     z-index:2;
-    display:none;
+}
+
+#navbar-header{
+    height:15%;
+    width:100%;
+}
+
+.menu{
+    height:10%;
+    width:100%;
+    transition: background-color 0.5s linear;
+    transition: color 0.5s linear;
+}
+
+.menu:hover{
+    background-color:plum;
+    color:white;
+}
+
+.arrow-fade-in{
+    float:left;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    border-left:20px solid peachpuff;
+    transition: all 0.25s ease-in-out;
+    margin-right:10px;
+    opacity:0;
+}
+
+.menu-text{
+    margin:0 auto;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    padding-left:0px;
 }
 
 #navy{
