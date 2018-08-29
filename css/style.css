@@ -10,7 +10,7 @@ body{
     height:100%;
     background-color:peachpuff;
     position:fixed;
-    z-index:2;
+    z-index:100;
 }
 
 #navbar-header{
@@ -160,7 +160,12 @@ a{
 #about-me-section{
     width:100%;
     height:100%;
-    background-color:darkgrey;
+    background-color:#808080;
+}
+
+#writeup-wrapper{
+    width:50%;
+    text-align:justify;
 }
 
 .wrapper-container{
@@ -168,6 +173,7 @@ a{
     top:8%;
     left:10%;
     width:70%;
+    
 }
 
 #about-me-animation{
@@ -184,7 +190,7 @@ a{
 
 #skills-section{
     width:100%;
-    height:100%;
+    height:120%;
     display: flex;
     flex-direction:column;    
 }
@@ -290,9 +296,119 @@ a{
 #contact-section{
     width:100%;
     height:100%;
-    background-color:darkolivegreen;
+    background-color:#808080;
 }
 
+#contact-phone-container{
+    width:275px;
+    height:150px;
+    border: 2px black solid;
+    position:relative;
+    top:10%;
+    left:10%;
+    float:left;
+}
+
+#contact-email-container{
+    width:275px;
+    height:150px;
+    border: 2px black solid;
+    position:relative;
+    top:10%;
+    left:15%;
+    float:left;
+    
+}
+
+#contact-social-container{
+    width:275px;
+    height:150px;
+    border: 2px black solid;
+    position:relative;
+    top:15%;
+    left:10%;
+    float:left;
+    
+}
+
+#contact-location-container{
+    width:275px;
+    height:150px;
+    border: 2px black solid;
+    position:relative;
+    top:15%;
+    left:15%;
+    float:left;
+    
+}
+
+.box-value{
+}
+
+#phone-icon{
+    margin: 10px 0 0 10px;
+}
+
+#linkedin-wrapper{
+    display:flex;
+}
+
+#github-wrapper{
+    display:flex;
+}
+
+#linkedin-icon{
+    width:30px;
+    height:30px;
+    margin: 10px 0 0 10px;
+    border-radius:50%;
+    flex-direction: row;
+}
+
+#github-icon{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    margin: 10px 0 0 10px;
+    flex-direction:row;
+}
+
+.social-value{
+    position:relative;
+    top:20px;
+    left:10px;
+    text-decoration:underline;
+    color:darkblue;
+    margin:0;
+}
+
+
+
+.clear-float{
+    clear:both;
+}
+
+#email-icon{
+    margin: 10px 0 0 10px;
+}
+
+.contact-container-header{
+    border-bottom: 3px black solid;
+    width:125px;
+    position:relative;
+    left: 80px;
+    top:-30px;
+    padding-right:50px;
+    font-size:30px;
+    
+}
+
+.contact-container-value{
+    position:relative;
+    left:80px;
+    top:-55px;
+    font-size:15px;
+}
 
 @media (max-width:600px){
     #main-section-container{

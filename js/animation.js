@@ -59,7 +59,7 @@ menu_output.click(function(){
 });
 
 var typed2 = new Typed('#typing-animation', {
-    strings: ['Welcome to my mini portfolio website . . . ^1000', 'It is not great, but not bad'],
+    strings: ['Welcome to my mini portfolio website . . . ^1000', 'Let me tell you more about myself.'],
     typeSpeed: 30,
     backSpeed: 30,
     smartBackspace: true,

@@ -17,9 +17,7 @@
 <body style="display:block">
     <img id="navy" src="Images/menu-icon.png">
     <section id="navbar">
-        <div id="navbar-header">
-            
-        </div>
+        <div id="navbar-header"></div>
         <div class="menu-container">
             <a href="#home" class="menu-click"><div class="menu">
                 <div class="arrow-fade-in"></div>
@@ -76,10 +74,16 @@
         <div class="wrapper-container">
             <h1 class="header-content">About Me</h1><br>
             <span id="about-me-animation"></span>
-            <p>I recently graduated from the University of Waterloo with a Bachelor of Electrical Engineering
-                in June and I am currently living in Toronto, ON.</p>
-            <p style="background-color:yellow">.... TO COMPLETED BECAUSE I'M BRAIN DEAD RIGHT NOW ... highlighted in yellow.. because huuuh... yelo!!
-            </p> 
+            <div id="writeup-wrapper">
+                <p>I grew up on a small island in the Indian Ocean called Mauritius and came to Canada in 2012 for my studies. Living in a new country by yourself
+                    and not knowing a lot of people was a challenge but a great experience.</p>
+                <p>I recently graduated from the University of Waterloo in June. I majored in the Bachelor's program of Electrical Engineering
+                    and I am currently living in Toronto, ON looking for a job in web development.</p>
+                <p>I graduated with several internships done through the university's Coop Program. I have some experience in
+                    end-user support, application support as well as some hardware troubleshooting experience. However,
+                    my area of interest has always been technology and IT, and I am looking to start this new journey as a web developer.</p>
+                <p>When I'm not working on projects, you will probably find me hanging out with friends, playing soccer, looking for new music, or binge watching Netflix at home.</p> 
+            </div>
         </div>
     </section>
 
@@ -110,8 +114,9 @@
                     <span class="skill-text">Work Experience</span>
                 </div>
                 <div class="arrow-content">
-                    <p>Barrick Gold : Systems Analyst, {Sept 17 - Dec 17}</p>
+                    <p>Barrick Gold : Systems and Development Analyst, {Sept 17 - Dec 17}</p>
                     <p>T4G Ltd : Internal Infrastructure Specialist, {Jan 17 - Apr 17}</p>
+                    <p>BlackBerry Ltd : Application Support Specialist, {May 16 - Aug 16}</p>
                 </div>
                 <br/>
             </div>
@@ -132,6 +137,34 @@
     <section id="contact-section">
         <div class="wrapper-container">
             <h1 class="header-content">Contact</h1>
+            <p>Feel free to contact me using the following contact information.</p>
+        </div>
+        <div id="contact-phone-container">
+            <img id="phone-icon" src="Images/phone-icon.png">
+            <div class="box-value">
+                <h3 class="contact-container-header">Mobile</h3>
+                <span class="contact-container-value">+1 (226)-339-4420</span>
+            </div>
+        </div>
+        <div id="contact-email-container">
+            <img id="email-icon" src="Images/mail-icon.png">
+            <h3 class="contact-container-header">Email</h3>
+            <span class="contact-container-value">elvinlkw@hotmail.com</span>
+        </div>
+        <div id="contact-social-container" class="clear-float">
+            <div id="linkedin-wrapper">
+                <img src="Images/linkedin.png" id="linkedin-icon">
+                <a target="_blank" href="https://www.linkedin.com/in/elvin-li-kam-wa-333560101/" class="social-value">linkedin.com/elvin-li-kam-wa</a>
+            </div>
+            <div id="github-wrapper">
+                <img src="Images/github-icon.png" id="github-icon">
+                <a target="_blank" href="https://www.github.com/elvinlkw" class="social-value">github.com/elvinlkw</a>
+            </div>
+        </div>
+        <div id="contact-location-container">
+            <img id="email-icon" src="Images/mail-icon.png">
+            <h3 class="contact-container-header">Location</h3>
+            <span class="contact-container-value">Toronto, ON</span>
         </div>
     </section>
 
