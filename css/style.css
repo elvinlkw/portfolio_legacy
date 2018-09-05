@@ -181,7 +181,7 @@ a{
 #skills-section{
     width:50%;
     height:100%;
-    color:mediumslateblue;
+    color:white;
     display: flex;
     flex-direction:column;
     float:left;    
@@ -202,6 +202,7 @@ a{
 #about-me-animation{
     font-weight: bold;
     font-size:120%;
+    color:gold;
 }
 
 .header-content{
@@ -210,8 +211,6 @@ a{
     flex-direction:column;
     border-bottom:2px black solid;
 }
-
-
 
 .switch{
     position: relative;
@@ -272,6 +271,12 @@ a{
 
 .skill-text{
     font-weight:bold;
+    color:#8CE4AD;
+}
+
+.content-bolded{
+    font-weight:bold;
+    color:lightblue;
 }
 
 .skill-wrapper{
@@ -431,5 +436,21 @@ a{
     #main-section-container{
         flex-direction:column;
         height:600px;
+    }
+
+    #img-container{
+        width:50%;
+        height:50%;
+        margin:auto;
+    }
+
+    #name-section{
+        width:100%;
+        margin:auto;
+        margin-top:0;
+    }
+
+    #name-container{
+        
     }
 }
