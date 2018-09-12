@@ -449,8 +449,26 @@ a{
         margin:auto;
         margin-top:0;
     }
+}
 
-    #name-container{
-        
+@media (max-width:600px){
+    #background-image{
+        display:flex;
+        flex-direction:column;
+        height:240%;
     }
+
+    #about-me-section{
+        width:80%;
+        height:100%;
+    }
+    #about-me-container{
+        left:10%;
+    }
+
+    #skills-section{
+        height:140%;
+        width:100%;
+    }
+
 }
