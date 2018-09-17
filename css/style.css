@@ -162,13 +162,19 @@ a{
     width:50%;
     height:100%;
     float:left;
-    color:#FFDBA8;
 }
 
 #background-image{
     width:100%;
     height:120%;
-    background-color:#222222;
+    background-color:#0a0706;
+}
+
+.header-content-skills{
+    font-size:200%;
+    display:inline-block;
+    flex-direction:column;
+    border-bottom: 2px solid goldenrod;
 }
 
 #about-me-container{
@@ -190,6 +196,7 @@ a{
 #writeup-wrapper{
     width:100%;
     text-align:justify;
+    color: #1e87d6;
 }
 
 .wrapper-container{
@@ -232,9 +239,9 @@ a{
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 13px;
@@ -244,39 +251,39 @@ a{
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .toggle-button:checked + .slider {
+}
+
+.toggle-button:checked + .slider {
     background-color: lightseagreen;
-  }
-  
-  .toggle-button:focus + .slider {
+}
+
+.toggle-button:focus + .slider {
     box-shadow: 0 0 1px lightseagreen;
-  }
-  
-  .toggle-button:checked + .slider:before {
+}
+
+.toggle-button:checked + .slider:before {
     -webkit-transform: translateX(13px);
     -ms-transform: translateX(13px);
     transform: translateX(13px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 17px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 17px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
 
 .skill-text{
     font-weight:bold;
-    color:#8CE4AD;
+    color:#1e87d6;
 }
 
 .content-bolded{
     font-weight:bold;
-    color:lightblue;
+    color:#0d94a3;
 }
 
 .skill-wrapper{
@@ -293,6 +300,7 @@ a{
     display:none;
     clear:both;
     margin-left:5vh;
+    color: #ff6e00;
 }
 
 .arrow-right{
@@ -301,7 +309,7 @@ a{
     height:0;
     border-top:8px solid transparent;
     border-bottom:8px solid transparent;
-    border-left:8px solid black;
+    border-left:8px solid white;
     transition: all 0.5s ease-in-out;
     margin-right:10px;
 }
@@ -403,8 +411,6 @@ a{
     color:darkblue;
     margin:0;
 }
-
-
 
 .clear-float{
     clear:both;
