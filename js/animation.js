@@ -27,7 +27,7 @@ $(document).ready( function(){
     // Invert color code
 
     var skillsSec = $("#background-image").offset().top;
-    var contactSec = $("#contact-section").offset().top - 2;
+    var portfolioSec = $("#portfolio-section").offset().top - 2;
     
     $("#background-image").hover(function(){
         $(navIcon).css({
@@ -38,7 +38,7 @@ $(document).ready( function(){
     });
 
     $(window).scroll(function(){
-        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < contactSec){
+        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < portfolioSec){
             $(navIcon).css({
                 'filter':'invert(1)',
                 '-webkit-filter': 'invert(1)',
