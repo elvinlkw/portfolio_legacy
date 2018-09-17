@@ -9,7 +9,7 @@ body{
 #navbar{
     width:13%;
     height:100%;
-    background-color:peachpuff;
+    background-color:#273c50;
     position:fixed;
     z-index:100;
 }
@@ -24,11 +24,12 @@ body{
     width:100%;
     transition: background-color 0.5s linear;
     transition: color 0.5s linear;
+    color:#0078ff;
 }
 
 .menu:hover{
-    background-color:plum;
-    color:white;
+    background-color:#0078ff;
+    color:#273c50;
 }
 
 .arrow-fade-in{
@@ -38,7 +39,7 @@ body{
     transform: translateY(-50%);
     border-top:10px solid transparent;
     border-bottom:10px solid transparent;
-    border-left:20px solid peachpuff;
+    border-left:20px solid #273c50;
     transition: all 0.25s ease-in-out;
     margin-right:10px;
     opacity:0;
@@ -54,6 +55,10 @@ body{
 
 a{
     text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
 }
 
 #nav-icon{
@@ -309,7 +314,7 @@ border-radius: 50%;
     height:0;
     border-top:8px solid transparent;
     border-bottom:8px solid transparent;
-    border-left:8px solid white;
+    border-left:8px solid #ff6e00;
     transition: all 0.5s ease-in-out;
     margin-right:10px;
 }
@@ -317,7 +322,7 @@ border-radius: 50%;
 .arrow-right:hover{
     border-top:8px solid transparent;
     border-bottom:8px solid transparent;
-    border-left:8px solid lightseagreen;
+    border-left:8px solid #0078ff;
 }
 
 .arrow-right.rotated{

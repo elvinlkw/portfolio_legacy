@@ -1,7 +1,6 @@
+$("#navbar").hide();
 $(document).ready( function(){
     var navIcon = $("#nav-icon");
-
-    $("#navbar").hide();
 
     //menubar
     navIcon.hover(function(){
@@ -27,8 +26,6 @@ $(document).ready( function(){
 
     // Invert color code
 
-    
-
     var skillsSec = $("#background-image").offset().top;
     var contactSec = $("#contact-section").offset().top - 2;
     
@@ -51,7 +48,8 @@ $(document).ready( function(){
         }else{
             $(navIcon).css({
                 'filter':'invert(0)',
-                '-webkit-filter': 'invert(0)'
+                '-webkit-filter': 'invert(0)',
+                'transition': 'all 0.5s ease-in-out'
             });
             
         }
