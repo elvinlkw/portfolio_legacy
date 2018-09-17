@@ -1,76 +1,109 @@
+$(document).ready( function(){
+    var navIcon = $("#nav-icon");
 
-var settings = $("#navy");
+    $("#navbar").hide();
 
-$("#navbar").hide();
+    //menubar
+    navIcon.hover(function(){
+        $("#navbar").slideDown('slow');
+    });
 
-//menubar
-settings.hover(function(){
-    $("#navbar").slideDown('slow');
-});
+    var menu = $(".menu");
 
-var menu = $(".menu");
+    menu.hover(function(){
+        $(this).find(".arrow-fade-in").css("opacity","1");
+            }, function(){
+                $(this).find(".arrow-fade-in").css("opacity","0");
+        
+    });
 
-menu.hover(function(){
-    $(this).find(".arrow-fade-in").css("opacity","1");
+    $("#navbar").hover(function(){
+        $("#navbar").css({
+            "opacity": "1",
+            "visibility": "visible"});
         }, function(){
-            $(this).find(".arrow-fade-in").css("opacity","0");
+            $("#navbar").slideUp('slow');
+    });
+
+    // Invert color code
+
     
-});
 
-$("#navbar").hover(function(){
-    $("#navbar").css({
-        "opacity": "1",
-        "visibility": "visible"});
-    }, function(){
+    var skillsSec = $("#background-image").offset().top;
+    var contactSec = $("#contact-section").offset().top - 2;
+    
+    $("#background-image").hover(function(){
+        $(navIcon).css({
+            'filter':'invert(1)',
+            '-webkit-filter': 'invert(1)',
+            'transition': 'all 0.5s ease-in-out'
+        });
+    });
+
+    $(window).scroll(function(){
+        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < contactSec){
+            $(navIcon).css({
+                'filter':'invert(1)',
+                '-webkit-filter': 'invert(1)',
+                'transition': 'all 0.5s ease-in-out'
+
+            });
+        }else{
+            $(navIcon).css({
+                'filter':'invert(0)',
+                '-webkit-filter': 'invert(0)'
+            });
+            
+        }
+    });
+
+
+    //arrow
+    var arrow = $(".arrow-right");
+
+    arrow.click(function(){
+
+        if(bToggle.is(':checked')){
+
+        }else{
+            $(this).toggleClass("rotated");
+
+            $(this).closest('.skill-wrapper').find('.arrow-content').slideToggle();
+        }
+
+    });
+
+    //Skills Section Toggle Button
+
+    var bToggle = $(".toggle-button");
+
+    bToggle.click(function() { 
+        $(".arrow-content").slideToggle();
+        if(bToggle.not(':checked')){
+            $(arrow).toggleClass("rotated");
+        }
+
+    });
+
+    var menu_output = $(".menu-click");
+
+    menu_output.click(function(){
         $("#navbar").slideUp('slow');
-});
+    });
 
-//arrow
-var arrow = $(".arrow-right");
+    var typed2 = new Typed('#typing-animation', {
+        strings: ['Welcome to my mini portfolio website . . . ^1000', 'Let me tell you more about myself.'],
+        typeSpeed: 30,
+        backSpeed: 30,
+        smartBackspace: true,
+        loop: true
+    });
 
-arrow.click(function(){
-
-    if(bToggle.is(':checked')){
-
-    }else{
-        $(this).toggleClass("rotated");
-
-        $(this).closest('.skill-wrapper').find('.arrow-content').slideToggle();
-    }
-
-});
-
-//Skills Section Toggle Button
-
-var bToggle = $(".toggle-button");
-
-bToggle.click(function() { 
-    $(".arrow-content").slideToggle();
-    if(bToggle.not(':checked')){
-        $(arrow).toggleClass("rotated");
-    }
-
-});
-
-var menu_output = $(".menu-click");
-
-menu_output.click(function(){
-    $("#navbar").slideUp('slow');
-});
-
-var typed2 = new Typed('#typing-animation', {
-    strings: ['Welcome to my mini portfolio website . . . ^1000', 'Let me tell you more about myself.'],
-    typeSpeed: 30,
-    backSpeed: 30,
-    smartBackspace: true,
-    loop: true
-});
-
-var typed3 = new Typed('#about-me-animation', {
-    strings: ['Hi, I\'m Elvin . . .^5000  and this is my story! ^2000'],
-    typeSpeed: 30,
-    loop:true
-});     
+    var typed3 = new Typed('#about-me-animation', {
+        strings: ['Hi, I\'m Elvin . . .^5000  and this is my story! ^2000'],
+        typeSpeed: 30,
+        loop:true
+    });     
 
 
 //Smooth-Scrolling Code
@@ -111,3 +144,6 @@ $('a[href*="#"]')
       }
     }
   });
+});
+
+
