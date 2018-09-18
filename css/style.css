@@ -312,6 +312,14 @@ border-radius: 50%;
     color: #ff6e00;
 }
 
+#arrow-content-mobile{
+    overflow:auto;
+    display:none;
+    clear:both;
+    margin-left:5vh;
+    color: #ff6e00;
+}
+
 .arrow-right{
     float:left;
     width:0;
@@ -338,45 +346,41 @@ border-radius: 50%;
     height:100%;
 }
 
+#contact-box{
+    display:inline-block;
+    position: relative;
+    top:75px;
+    left:10%;
+    width:80%;
+}
+
 #contact-phone-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:10%;
-    left:10%;
     float:left;
+    margin: 0 5% 5% 0;
 }
 
 #contact-email-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:10%;
-    left:15%;
     float:left;
-    
 }
 
 #contact-social-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:15%;
-    left:10%;
     float:left;
-    
+    margin-right: 5%;
 }
 
 #contact-location-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:15%;
-    left:15%;
     float:left;
     
 }
@@ -464,18 +468,25 @@ border-radius: 50%;
 }
 
 @media (max-width:600px){
+
     #background-image{
         display:flex;
         flex-direction:column;
-        height:240%;
+        height:200%;
     }
 
     #about-me-section{
         width:80%;
         height:100%;
     }
-    #about-me-container{
-        left:10%;
+
+    #about-me-animation{
+        font-size: 90%;
+    }
+
+    #writeup-wrapper{
+        text-align:left;
+        font-size: 75%;
     }
 
     #skills-section{
@@ -483,4 +494,36 @@ border-radius: 50%;
         width:100%;
     }
 
+    .wrapper-container{
+        position:relative;
+        width:90%;
+        margin:0 auto;
+    }
+
+    .skill-text{
+        font-size:75%;
+    }
+
+    .arrow-content{
+        font-size:75%;
+        width:70%;
+    }
+
+    #arrow-content-mobile{
+        font-size:75%;
+    }
+
+    .hidden-mobile{
+        display:none;
+    }
+
+    #contact-box{
+        margin: 0 auto;
+        left:20%;
+    }
+
+    .contact-box-mobile{
+        margin-bottom: 5%; 
+    }
 }
+
