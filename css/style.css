@@ -338,6 +338,13 @@ border-radius: 50%;
     height:100%;
 }
 
+.project-container{
+    height:275px;
+    width:275px;
+    border: 2px black ridge;
+    margin-right: 50px;
+}
+
 #projects-wrapper{
     width:80%;
     position:relative;
@@ -348,19 +355,44 @@ border-radius: 50%;
 }
 
 .projects-snippet{
-    width:300px;
-    height:300px;
-    background-color:darkred;
+    width:275px;
+    height:215px;
     margin-right:40px;
 }
 
 .project-title{
-    width:300px;
+    width:275px;
+    height:25px;
+    font-size: 1em;
     text-align:center;
     font-weight:bold;
+    margin:0;
+    padding-top:10px;
+    background-color:#fdff86;
 }
 
+.project-description{
+    width:275px;
+    height:25px;
+    margin:0;
+    text-align:center;
+    font-size:80%;
+    background-color:#fdff86;
+}
 
+#github-container{
+    position:relative;
+    left:10%;
+    display:flex;
+    top:-10%;
+}
+
+#github-text{
+    position:relative;
+    left:15px;
+    top:15px;
+    text-decoration:underline;
+}
 
 #contact-section{
     width:100%;
@@ -396,7 +428,8 @@ border-radius: 50%;
     top:15%;
     left:10%;
     float:left;
-    
+    display:flex;
+    flex-direction:column;
 }
 
 #contact-location-container{
