@@ -469,10 +469,15 @@ border-radius: 50%;
 
 @media (max-width:600px){
 
+    body{
+        width:100%;
+    }
+
     #background-image{
         display:flex;
         flex-direction:column;
         height:200%;
+        width:110%;
     }
 
     #about-me-section{
@@ -496,7 +501,7 @@ border-radius: 50%;
 
     .wrapper-container{
         position:relative;
-        width:90%;
+        left:5%;
         margin:0 auto;
     }
 
@@ -519,7 +524,7 @@ border-radius: 50%;
 
     #contact-box{
         margin: 0 auto;
-        left:20%;
+        left:15%;
     }
 
     .contact-box-mobile{
