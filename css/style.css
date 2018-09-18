@@ -341,11 +341,26 @@ border-radius: 50%;
 #projects-wrapper{
     width:80%;
     position:relative;
-    top:10%;
+    top:8%;
     margin: 0 auto;
-    height:80%;
-    background-color: blue;
+    height:70%;
+    display:flex;
 }
+
+.projects-snippet{
+    width:300px;
+    height:300px;
+    background-color:darkred;
+    margin-right:40px;
+}
+
+.project-title{
+    width:300px;
+    text-align:center;
+    font-weight:bold;
+}
+
+
 
 #contact-section{
     width:100%;
