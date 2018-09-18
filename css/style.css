@@ -334,6 +334,14 @@ border-radius: 50%;
     height:100%;
 }
 
+#projects-wrapper{
+    width:80%;
+    position:relative;
+    top:10%;
+    margin: 0 auto;
+    height:80%;
+    background-color: blue;
+}
 
 #contact-section{
     width:100%;

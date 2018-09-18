@@ -56,7 +56,7 @@ $(document).ready( function(){
     });
 
 
-    //arrow
+    //arrow for skills section
     var arrow = $(".arrow-right");
 
     arrow.click(function(){
