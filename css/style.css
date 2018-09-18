@@ -32,6 +32,10 @@ body{
     color:#273c50;
 }
 
+.menu-click:hover{
+    text-decoration: none;
+}
+
 .arrow-fade-in{
     float:left;
     position:relative;
