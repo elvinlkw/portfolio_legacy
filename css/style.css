@@ -478,7 +478,6 @@ border-radius: 50%;
 @media (max-width:768px){
     #main-section-container{
         flex-direction:column;
-        height:80%;
     }
 
     #nav-icon{
