@@ -100,7 +100,7 @@ a:hover{
 }
 
 #name-container{
-    width:80%;
+    width:60%;
     position:relative;
     top:50%;
     left:50%;
@@ -149,6 +149,33 @@ a:hover{
     width:25%;  
     font-size:80%;
 }
+
+#contact-container-mobile{
+    display:none;
+}
+
+#mobile-contact-table{
+    font-size:75%;
+    border:1px solid black;
+    position:relative;
+    margin: 0 auto;
+    top: 5em;
+    left:5%;
+    border-collapse: collapse;
+    width: 60%;
+    text-align:center;
+}
+
+td{
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+}
+
+.td-header{
+    font-weight: bold;
+
+}
+
 
 #typing-animation{
     font-size:1.3vw;
@@ -451,20 +478,41 @@ border-radius: 50%;
 @media (max-width:600px){
     #main-section-container{
         flex-direction:column;
-        height:600px;
+        height:80%;
+    }
+
+    #nav-icon{
+        width:40px;
     }
 
     #img-container{
-        width:50%;
-        height:50%;
-        margin:auto;
+        height:35%;
+        margin: 0 auto;
     }
 
     #name-section{
         width:100%;
-        margin:auto;
-        margin-top:0;
+        height:50%;
     }
+
+    #name-container{
+        top:20%;
+        margin: 0 auto;
+    }
+
+    #typing-animation{
+        font-size: 50%;
+    }
+
+    #contact-container{
+        display:none;
+    }
+
+    #contact-container-mobile{
+        display:block;
+    }
+
+    
 }
 
 @media (max-width:600px){
