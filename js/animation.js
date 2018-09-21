@@ -1,5 +1,8 @@
 $("#navbar").hide();
 $(document).ready( function(){
+
+    screen.lockOrientation("portrait");
+
     var navIcon = $("#nav-icon");
     //menubar
     navIcon.hover(function(){
