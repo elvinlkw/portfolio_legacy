@@ -100,7 +100,7 @@ a:hover{
 }
 
 #name-container{
-    width:80%;
+    width:60%;
     position:relative;
     top:50%;
     left:50%;
@@ -149,6 +149,33 @@ a:hover{
     width:25%;  
     font-size:80%;
 }
+
+#contact-container-mobile{
+    display:none;
+}
+
+#mobile-contact-table{
+    font-size:75%;
+    border:1px solid black;
+    position:relative;
+    margin: 0 auto;
+    top: 5em;
+    left:5%;
+    border-collapse: collapse;
+    width: 60%;
+    text-align:center;
+}
+
+td{
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+}
+
+.td-header{
+    font-weight: bold;
+
+}
+
 
 #typing-animation{
     font-size:1.3vw;
@@ -312,6 +339,14 @@ border-radius: 50%;
     color: #ff6e00;
 }
 
+#arrow-content-mobile{
+    overflow:auto;
+    display:none;
+    clear:both;
+    margin-left:5vh;
+    color: #ff6e00;
+}
+
 .arrow-right{
     float:left;
     width:0;
@@ -399,46 +434,41 @@ border-radius: 50%;
     height:100%;
 }
 
+#contact-box{
+    display:inline-block;
+    position: relative;
+    top:75px;
+    left:10%;
+    width:80%;
+}
+
 #contact-phone-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:10%;
-    left:10%;
     float:left;
+    margin: 0 5% 5% 0;
 }
 
 #contact-email-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:10%;
-    left:15%;
     float:left;
-    
 }
 
 #contact-social-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:15%;
-    left:10%;
     float:left;
-    display:flex;
-    flex-direction:column;
+    margin-right: 5%;
 }
 
 #contact-location-container{
     width:275px;
     height:150px;
     border: 2px black solid;
-    position:relative;
-    top:15%;
-    left:15%;
     float:left;
     
 }
@@ -506,38 +536,70 @@ border-radius: 50%;
     font-size:15px;
 }
 
-@media (max-width:600px){
+@media (max-width:768px){
     #main-section-container{
         flex-direction:column;
-        height:600px;
+    }
+
+    #nav-icon{
+        width:40px;
     }
 
     #img-container{
-        width:50%;
-        height:50%;
-        margin:auto;
+        height:35%;
+        margin: 0 auto;
     }
 
     #name-section{
         width:100%;
-        margin:auto;
-        margin-top:0;
+        height:50%;
     }
+
+    #name-container{
+        top:30%;
+        margin: 0 auto;
+    }
+
+    #typing-animation{
+        font-size: 50%;
+    }
+
+    #contact-container{
+        display:none;
+    }
+
+    #contact-container-mobile{
+        display:block;
+    }
+
+    
 }
 
-@media (max-width:600px){
+@media (max-width:768px){
+
+    body{
+        width:100%;
+    }
+
     #background-image{
         display:flex;
         flex-direction:column;
-        height:240%;
+        height:200%;
+        width:110%;
     }
 
     #about-me-section{
         width:80%;
         height:100%;
     }
-    #about-me-container{
-        left:10%;
+
+    #about-me-animation{
+        font-size: 90%;
+    }
+
+    #writeup-wrapper{
+        text-align:left;
+        font-size: 75%;
     }
 
     #skills-section{
@@ -545,4 +607,36 @@ border-radius: 50%;
         width:100%;
     }
 
+    .wrapper-container{
+        position:relative;
+        left:5%;
+        margin:0 auto;
+    }
+
+    .skill-text{
+        font-size:75%;
+    }
+
+    .arrow-content{
+        font-size:75%;
+        width:70%;
+    }
+
+    #arrow-content-mobile{
+        font-size:75%;
+    }
+
+    .hidden-mobile{
+        display:none;
+    }
+
+    #contact-box{
+        margin: 0 auto;
+        left:15%;
+    }
+
+    .contact-box-mobile{
+        margin-bottom: 5%; 
+    }
 }
+

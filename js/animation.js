@@ -1,7 +1,6 @@
 $("#navbar").hide();
 $(document).ready( function(){
     var navIcon = $("#nav-icon");
-
     //menubar
     navIcon.hover(function(){
         $("#navbar").slideDown('slow');
@@ -55,20 +54,29 @@ $(document).ready( function(){
         }
     });
 
+<<<<<<< HEAD
 
     //arrow for skills section
+=======
+    //arrow
+>>>>>>> master
     var arrow = $(".arrow-right");
-
+    //when arrow is clicked, the content of specific arrow is slided down
     arrow.click(function(){
-
         if(bToggle.is(':checked')){
 
         }else{
             $(this).toggleClass("rotated");
-
-            $(this).closest('.skill-wrapper').find('.arrow-content').slideToggle();
+            //to modify width;#########################
+            if($(document).width() < 600){
+                $(this).closest('.skill-wrapper').find('.arrow-content').slideToggle();
+                $(".hidden-mobile").hide();
+                $(this).closest('.skill-wrapper').find($('#arrow-content-mobile')).slideToggle();
+            }else{
+                $(this).closest('.skill-wrapper').find('.arrow-content').slideToggle();
+            }
+            
         }
-
     });
 
     //Skills Section Toggle Button
@@ -76,7 +84,15 @@ $(document).ready( function(){
     var bToggle = $(".toggle-button");
 
     bToggle.click(function() { 
-        $(".arrow-content").slideToggle();
+        
+        if($(document).width() < 600){
+            $('.arrow-content').slideToggle();
+            $(".hidden-mobile").hide();
+            $('#arrow-content-mobile').slideToggle();
+        }else{
+            $('.arrow-content').slideToggle();
+        }
+
         if(bToggle.not(':checked')){
             $(arrow).toggleClass("rotated");
         }
@@ -101,7 +117,10 @@ $(document).ready( function(){
         strings: ['Hi, I\'m Elvin . . .^5000  and this is my story! ^2000'],
         typeSpeed: 30,
         loop:true
-    });     
+    });
+
+
+    
 
 
 //Smooth-Scrolling Code
