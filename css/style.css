@@ -25,6 +25,12 @@ body{
     transition: background-color 0.5s linear;
     transition: color 0.5s linear;
     color:#0078ff;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+}
+
+#topmenu{
+    border-top:1px solid gray;
 }
 
 .menu:hover{
@@ -438,6 +444,8 @@ border-radius: 50%;
     border-radius:50%;
     margin: 10px 0 0 10px;
     flex-direction:row;
+    filter: invert(1);
+    -webkit-filter: invert(1);
 }
 
 .social-value{
