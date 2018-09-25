@@ -55,12 +55,7 @@ $(document).ready( function(){
         }
     });
 
-<<<<<<< HEAD
-
-    //arrow for skills section
-=======
     //arrow
->>>>>>> master
     var arrow = $(".arrow-right");
     //when arrow is clicked, the content of specific arrow is slided down
     arrow.click(function(){
