@@ -695,7 +695,7 @@ border-radius: 50%;
     #background-image{
         display:flex;
         flex-direction:column;
-        height:200%;
+        height:240%;
         width:110%;
     }
 
