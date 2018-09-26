@@ -8,7 +8,7 @@ body{
 #navbar{
     width:13%;
     height:100%;
-    background-color:#273c50;
+    background-color:black;
     position:fixed;
     z-index:100;
 }
@@ -16,6 +16,7 @@ body{
 #navbar-header{
     height:15%;
     width:100%;
+    position:relative;
 }
 
 .menu{
@@ -24,17 +25,18 @@ body{
     transition: background-color 0.5s linear;
     transition: color 0.5s linear;
     color:#0078ff;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #1e87d6;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
 #topmenu{
-    border-top:1px solid gray;
+    border-top:1px solid #1e87d6;
 }
 
 .menu:hover{
     background-color:#0078ff;
-    color:#273c50;
+    color:#000000;
 }
 
 .menu-click:hover{
@@ -48,7 +50,7 @@ body{
     transform: translateY(-50%);
     border-top:10px solid transparent;
     border-bottom:10px solid transparent;
-    border-left:20px solid #273c50;
+    border-left:20px solid #000000;
     transition: all 0.25s ease-in-out;
     margin-right:10px;
     opacity:0;
@@ -76,6 +78,19 @@ a:hover{
     left:1%;
     top:2%;
     z-index:3;
+}
+
+#nav-img-wrapper{
+    position:relative;
+    
+}
+
+#nav-img{
+    width:100%;
+    position:absolute;
+    left:45%;
+    transform: translate(-50%, 20%);
+    filter:invert(1);
 }
 
 #main-section-container{
