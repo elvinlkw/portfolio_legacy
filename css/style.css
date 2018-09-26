@@ -3,7 +3,6 @@ body{
     padding:0;
     overflow-x:hidden;
     font-family: 'Lato', helvetica, Arial, sans-serif;
-    
 }
 
 #navbar{
@@ -374,6 +373,67 @@ border-radius: 50%;
     transform : rotate(90deg); 
 }
 
+#portfolio-section{
+    width:100%;
+    height:100%;
+}
+
+.project-container{
+    height:275px;
+    width:275px;
+    border: 2px black ridge;
+    margin-right: 50px;
+}
+
+#projects-wrapper{
+    width:80%;
+    position:relative;
+    top:8%;
+    margin: 0 auto;
+    height:70%;
+    display:flex;
+}
+
+.projects-snippet{
+    width:275px;
+    height:215px;
+    margin-right:40px;
+}
+
+.project-title{
+    width:275px;
+    height:25px;
+    font-size: 1em;
+    text-align:center;
+    font-weight:bold;
+    margin:0;
+    padding-top:10px;
+    background-color:#fdff86;
+}
+
+.project-description{
+    width:275px;
+    height:25px;
+    margin:0;
+    text-align:center;
+    font-size:80%;
+    background-color:#fdff86;
+}
+
+#github-container{
+    position:relative;
+    left:10%;
+    display:flex;
+    top:-10%;
+}
+
+#github-text{
+    position:relative;
+    left:15px;
+    top:15px;
+    text-decoration:underline;
+}
+
 #contact-section{
     width:100%;
     height:100%;
@@ -393,6 +453,13 @@ border-radius: 50%;
     border: 2px black solid;
     float:left;
     margin: 0 5% 5% 0;
+    position:relative;
+    transform-style: preserve-3d;
+    perspective:600px;
+    transition: 0.5s;
+    position: relative;
+    border: 4px gray solid;
+    box-sizing: border-box;
 }
 
 #contact-email-container{
@@ -400,6 +467,9 @@ border-radius: 50%;
     height:150px;
     border: 2px black solid;
     float:left;
+    position:relative;
+    border: 4px gray solid;
+    box-sizing: border-box;
 }
 
 #contact-social-container{
@@ -407,7 +477,10 @@ border-radius: 50%;
     height:150px;
     border: 2px black solid;
     float:left;
+    position:relative;
     margin-right: 5%;
+    border: 4px gray solid;
+    box-sizing: border-box;
 }
 
 #contact-location-container{
@@ -415,7 +488,74 @@ border-radius: 50%;
     height:150px;
     border: 2px black solid;
     float:left;
-    
+    position:relative;   
+    border: 4px gray solid;
+    box-sizing: border-box; 
+}
+
+.contact{
+    position:absolute;
+    width:275px;
+    height:150px;
+    transform-style: preserve-3d;
+    perspective:600px;
+    transition: 0.5s;
+}
+
+.front{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 1s;
+}
+
+#contact-phone-container:hover .front, 
+#contact-email-container:hover .front,
+#contact-social-container:hover .front,
+#contact-location-container:hover .front{
+    transform: rotateX(-180deg);
+}
+
+#contact-phone-container:hover .back, 
+#contact-email-container:hover .back,
+#contact-social-container:hover .back,
+#contact-location-container:hover .back{
+    transform: rotateX(0deg);
+}
+
+.back{
+    background:white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 1s;
+}
+
+
+
+.fa{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    filter:invert(0.5);
+}
+
+.text-front{
+    position:absolute;
+    color:#ccc;
+    left: 50%;
+    top:60%;
+    transform: translateX(-50%);
 }
 
 #phone-icon{
@@ -596,5 +736,6 @@ border-radius: 50%;
 
     .contact-box-mobile{
         margin-bottom: 5%; 
-    }
+    }    
+
 }
