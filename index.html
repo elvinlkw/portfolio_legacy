@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 
 </head>
@@ -35,6 +36,9 @@
                 <div class="arrow-fade-in"></div>
                 <p class="menu-text">CONTACT</p>
             </div></a>
+        </div>
+        <div id="nav-img-wrapper">
+            <img id="nav-img" src="Images/index.png">
         </div>
 
     </section>
@@ -201,34 +205,59 @@
         <div class="wrapper-container">
             <h1 class="header-content">Contact</h1>
             <p>Feel free to contact me using the following contact information.</p>
+            <p>Hover over any of the boxes for more details</p>
         </div>
         <div id="contact-box">
             <div id="contact-phone-container">
-                <img id="phone-icon" src="Images/phone-icon.png">
-                <div class="box-value">
-                    <h3 class="contact-container-header">Mobile</h3>
-                    <span class="contact-container-value">+1 (226)-339-4420</span>
+                <div class="front">
+                    <i class="fa fa-phone fa-5x" aria-hidden="true"></i>
+                    <h4 class="text-front">Mobile</h4>
+                </div>
+                <div class="back">
+                    <img id="phone-icon" src="Images/phone-icon.png">
+                    <div class="box-value">
+                        <h3 class="contact-container-header">Mobile</h3>
+                        <span class="contact-container-value">+1 (226)-339-4420</span>
+                    </div>
                 </div>
             </div>
             <div id="contact-email-container" class="contact-box-mobile">
-                <img id="email-icon" src="Images/mail-icon.png">
-                <h3 class="contact-container-header">Email</h3>
-                <span class="contact-container-value"><a href="mailto:elvinlkw@hotmail.com">elvinlkw@hotmail.com</a></span>
+                <div class="front">
+                    <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+                    <h4 class="text-front">Email</h4>
+                </div>
+                <div class="back">
+                    <img id="email-icon" src="Images/mail-icon.png">
+                    <h3 class="contact-container-header">Email</h3>
+                    <span class="contact-container-value"><a href="mailto:elvinlkw@hotmail.com">elvinlkw@hotmail.com</a></span>        
+                </div>
             </div>
             <div id="contact-social-container" class="contact-box-mobile clear-float">
-                <div id="linkedin-wrapper">
-                    <img src="Images/linkedin.png" id="linkedin-icon">
-                    <a target="_blank" href="https://www.linkedin.com/in/elvin-li-kam-wa-333560101/" class="social-value">linkedin.com/elvin-li-kam-wa</a>
+                <div class="front">
+                    <i class="fa fa-github fa-5x" aria-hidden="true"></i>
+                    <h4 class="text-front">Social</h4>
                 </div>
-                <div id="github-wrapper">
-                    <img src="Images/github-icon.png" id="github-icon">
-                    <a target="_blank" href="https://www.github.com/elvinlkw" class="social-value">github.com/elvinlkw</a>
+                <div class="back">
+                    <div id="linkedin-wrapper">
+                        <img src="Images/linkedin.png" id="linkedin-icon">
+                        <a target="_blank" href="https://www.linkedin.com/in/elvin-li-kam-wa-333560101/" class="social-value">linkedin.com/elvin-li-kam-wa</a>
+                    </div>
+                    <div id="github-wrapper">
+                        <img src="Images/github-icon.png" id="github-icon">
+                        <a target="_blank" href="https://www.github.com/elvinlkw" class="social-value">github.com/elvinlkw</a>
+                    </div>    
                 </div>
             </div>
             <div class="contact-box-mobile" id="contact-location-container">
-                <img id="email-icon" src="Images/mail-icon.png">
-                <h3 class="contact-container-header">Location</h3>
-                <span class="contact-container-value">Toronto, ON</span>
+                <div class="front">
+                    <i class="fa fa-home fa-5x" aria-hidden="true"></i>
+                    <h4 class="text-front">Location</h4>
+                </div>
+                <div class="back">
+                    <img id="email-icon" src="Images/mail-icon.png">
+                    <h3 class="contact-container-header">Location</h3>
+                    <span class="contact-container-value">Toronto, ON</span>
+                </div>
             </div>
         </div>
     </section>

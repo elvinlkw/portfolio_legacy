@@ -1,4 +1,5 @@
 $("#navbar").hide();
+
 $(document).ready( function(){
 
     var navIcon = $("#nav-icon");
