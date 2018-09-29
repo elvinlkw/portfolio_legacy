@@ -538,28 +538,6 @@ a:hover{text-decoration:underline;}
     font-size:15px;
 }
 
-/* footer Section */
-
-#footer{
-    position:relative;
-    top:50%;
-    height:2%;
-    width: 60%;
-    margin: 0 auto;
-    border-top: 2px black solid;
-}
-
-.fa-copyright{
-    position:absolute;
-    left:43%;
-}
-
-#footer-text{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-around;
-}
-
 @media screen and (max-width:768px){
     #lp-landing-page{
         flex-direction: column;
@@ -663,10 +641,16 @@ a:hover{text-decoration:underline;}
         height:140%;
     }
 
-    .skill-arrow-text
     .skill-arrow-content,
+    .skill-arrow-text,
     #skill-arrow-content-mobile{
         font-size:0.75em;
+    }
+
+    #contact-box{
+        width:275px;
+        position:relative;
+        left:13%;
     }
 
     .contact-box-mobile{
