@@ -1,73 +1,71 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Elvin Li Kam Wa</title>
-    <link rel="shortcut icon" href="Images/shortcut.ico"/>
+
+    <link rel="shortcut icon" href="img/shortcut.ico"/>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/typed.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/typed.js"></script>
 </head>
-<body style="display:block">
-    <img id="nav-icon" src="Images/menu-icon.png">
+<body>
+
+    <img id="nav-icon" src="img/menu-icon.png">
+
     <section id="navbar">
         <div id="navbar-header"></div>
-        <div class="menu-container">
-            <a href="#home" class="menu-click"><div id="topmenu" class="menu">
-                <div class="arrow-fade-in"></div>
-                <p class="menu-text">HOME</p>
+        <div id="nav-menu-container">
+            <a href="#home"><div class="nav-menu" id="top">
+                <div class="nav-arrow"></div>
+                <p class="nav-menu-text">HOME</p>
             </div></a>
-            <a href="#about" class="menu-click"><div class="menu">
-                <div class="arrow-fade-in"></div>
-                <p class="menu-text">EXPERIENCE</p>
+            <a href="#about"><div class="nav-menu">
+                <div class="nav-arrow"></div>
+                <p class="nav-menu-text">EXPERIENCE</p>
             </div></a>
-            <a href="#contact-section" class="menu-click"><div class="menu">
-                <div class="arrow-fade-in"></div>
-                <p class="menu-text">CONTACT</p>
+            <a href="#contact"><div class="nav-menu">
+                <div class="nav-arrow"></div>
+                <p class="nav-menu-text">CONTACT</p>
             </div></a>
         </div>
-        <div id="nav-img-wrapper">
-            <img id="nav-img" src="Images/index.png">
-        </div>
+        <img src="img/index.png" id="nav-img">
 
     </section>
-    <section id="main-section-container"><a name="home"></a>
-        <div id="img-container">
-            <img id="profile-img"src="Images/index.png">
+
+    <section id="lp-landing-page"><a name="home"></a>
+        <div id="lp-img-container">
+            <img id="lp-img" src="img/index.png">
         </div>
-        <div id="name-section">
-            <div id="name-container">
-                <h1 class="name-text" id="first-name">Elvin</h1>
-                <h1 class="name-text" id="last-name">LI KAM WA</h1>
-                <h3 id="job-title">Front-End Web Developer</h3>
-                <span id="typing-animation"></span>
+        <div id="lp-header-container">
+            <div id="lp-header-wrapper">
+                <h1>Elvin</h1>
+                <h1>LI KAM WA</h1>
+                <h3>Front-End Web Developer</h3>
+                <div id="lp-animation"></div>
             </div>
-            <div id="contact-container">
-                <div id="location">
-                    <p class="contact-header">Location</p>
-                    <p class="contact-text">Toronto, ON</p>
-                </div>
-                <div class="tag" id="phone">
-                    <p class="contact-header">Phone</p>
-                    <p class="contact-text">(226)-339-4420</p>
-                </div>
-                <div class="tag" id="website">
-                    <p class="contact-header">Website</p>
-                    <a class="contact-text" href="https://elvinlkw.github.io/" target="_blank">elvinlkw.github.io</a>
-                </div>
-                <div class="tag" id="email">
-                    <p class="contact-header">Email</p>
-                    <a class="contact-text" href="mailto:elvinlkw@hotmail.com">elvinlkw@hotmail.com</a>
-                </div>
+            <div id="lp-contact-wrapper">
+                <ul class="lp-contact" style="font-weight:bold">
+                    <li class="lp-text">Location</li>
+                    <li class="lp-text">Phone</li>
+                    <li class="lp-text">Website</li>
+                    <li class="lp-text">Email</li>
+                </ul>
+                <ul class="lp-contact">
+                    <li class="lp-text">Toronto, ON</li>
+                    <li class="lp-text">(226)-339-4420</li>
+                    <li class="lp-text">elvinlkw.github.io</li>
+                    <li class="lp-text">elvinlkw@hotmail.com</li>
+                </ul>
             </div>
-            <div id="contact-container-mobile">
+            <div id="lp-contact-wrapper-mobile">
                 <table id="mobile-contact-table">
                     <tr>
                         <td class="td-header">Location</td>
@@ -79,22 +77,23 @@
                     </tr>
                     <tr>
                         <td class="td-header">Website</td>
-                        <td class="td-data">elvinlkw.github.io</td>
+                        <td class="td-data">github.com/elvinlkw</td>
                     </tr>
                     <tr>
                         <td class="td-header">Email</td>
-                        <td class="td-data">elvinlkw@hotmail.com</td>
+                        <td class="td-data"><a href="mailto:elvinlkw@hotmail.com">elvinlkw@hotmail.com</a></td>
                     </tr>
                 </table>
-            </div>          
+            </div>
         </div>
     </section>
-    <div id="background-image">
-        <section id="about-me-section"><a name="about"></a>
+
+    <main id="main" ><a name="about"></a>
+        <section id="section-about-me">
             <div id="about-me-container">
-                <h1 class="header-content-skills" style="color:goldenrod">About Me</h1><br>
-                <span id="about-me-animation"></span>
-                <div id="writeup-wrapper">
+                <h1 style="color:#daa520" class="section-header">About Me</h1><br/>
+                <div id="about-me-animation"></div>
+                <div id="about-me-writeup">
                     <p>
                         I graduated from the University of Waterloo in June 2018, with a Bachelor's degree in Electrical Engineering.
                         As part of my coop undergrad program, I had the opportunity to work at different companies and
@@ -117,64 +116,59 @@
                 </div>
             </div>
         </section>
-        <section id="skills-section">
-            <div class="wrapper-container">
-                <h1 class="header-content-skills" style="color:goldenrod">Experience</h1><br>
-                <label class="switch">
-                    <input class="toggle-button" type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <div class="skill-wrapper"> 
-                    <div class="arrow-wrapper">
-                        <div class="arrow-right"></div>
-                        <span class="skill-text">Skills</span>
+        <section id="section-experience">
+            <div class="section-content-wrapper">
+                <h1 style="color:#daa520" class="section-header">Experience</h1><br/>
+                <input type="checkbox" id="experience-toggle-button">
+                <div class="skill-wrapper">
+                    <div class="skill-arrow-wrapper">
+                        <div class="skill-arrow"></div>
+                        <span class="skill-arrow-text">Skills</span>
                     </div>
-                    <div class="arrow-content">
+                    <div class="skill-arrow-content">
                         <p><span class="content-bolded">Frontend</span> :  HTML, CSS, Javascript (jQuery)</p>
                         <p><span class="content-bolded">Languages</span> : Python, SQL</p>
                         <p><span  class="content-bolded">Operating Systems</span> : Windows, Linux</p>
                         <p><span class="content-bolded">Software</span> : Git, SVN, JIRA</p>
                         <p><span class="content-bolded">Bilingual</span> : English, French</p>
                     </div>
-                    <br>
                 </div>
                 <div class="skill-wrapper">
-                    <div class="arrow-wrapper">
-                        <div class="arrow-right"></div>
-                        <span class="skill-text">Work Experience</span>
+                    <div class="skill-arrow-wrapper">
+                        <div class="skill-arrow"></div>
+                        <span class="skill-arrow-text">Work Experience</span>
                     </div>
-                    <div class="arrow-content hidden-mobile">
+                    <div class="skill-arrow-content hidden-mobile">
                         <p><span class="content-bolded">Barrick Gold</span> : Systems and Development Analyst <span style="color:burlywood">{Sept 17 - Dec 17}</span></p>
                         <p><span class="content-bolded">T4G Ltd</span> : Internal Infrastructure Specialist <span style="color:burlywood">{Jan 17 - Apr 17}</span></p>
-                        <p><span class="content-bolded">BlackBerry Ltd</span> : Application Support Specialist <span style="color:burlywood">{May 16 - Aug 16}</span></p>
+                        <p><span class="content-bolded">BlackBerry Ltd</span> : Application Support Specialist <span style="color:burlywood">{May 16 - Aug 16}</span></p>    
                     </div>
-                    <div id="arrow-content-mobile">
+                    <div id="skill-arrow-content-mobile">
                         <p><span class="content-bolded">Barrick Gold</span> : <br/>Systems and Development Analyst <span style="color:burlywood"><br/>{Sept 17 - Dec 17}</span></p>
                         <p><span class="content-bolded">T4G Ltd</span> : <br/>Internal Infrastructure Specialist <span style="color:burlywood"><br/>{Jan 17 - Apr 17}</span></p>
                         <p><span class="content-bolded">BlackBerry Ltd</span> : <br/>Application Support Specialist <span style="color:burlywood"><br/>{May 16 - Aug 16}</span></p>
                     </div>
-                    <br/>
                 </div>
                 <div class="skill-wrapper">
-                    <div class="arrow-wrapper">
-                        <div class="arrow-right"></div>
-                        <span class="skill-text">Education</span>
+                    <div class="skill-arrow-wrapper">
+                        <div class="skill-arrow"></div>
+                        <span class="skill-arrow-text">Education</span>
                     </div>
-                    <div class="arrow-content">
-                        <p style="font-weight:bold">University of Waterloo, Ontario, Canada</p>
+                    <div class="skill-arrow-content">
+                        <p class="content-bolded">University of Waterloo, Ontario, Canada</p>
                         <p>BSc, Honors Electrical Engineering</p>
                         <p>Graduated in 2018</p>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <section id="contact-section" class="clear-float">
-        <div class="wrapper-container">
-            <h1 class="header-content">Contact</h1>
+    <section id="section-contact"><a name="contact"></a>
+        <div class="section-content-wrapper">
+            <h1 class="section-header">Contact</h1>
             <p>Feel free to contact me using the following contact information.</p>
-            <p>Hover over any of the boxes for more details</p>
+            <p>Hover over any of the boxes for more detail.</p>
         </div>
         <div id="contact-box">
             <div id="contact-phone-container">
@@ -183,7 +177,7 @@
                     <h4 class="text-front">Mobile</h4>
                 </div>
                 <div class="back">
-                    <img id="phone-icon" src="Images/phone-icon.png">
+                    <img class="icon" src="img/phone-icon.png">
                     <div class="box-value">
                         <h3 class="contact-container-header">Mobile</h3>
                         <span class="contact-container-value">+1 (226)-339-4420</span>
@@ -196,7 +190,7 @@
                     <h4 class="text-front">Email</h4>
                 </div>
                 <div class="back">
-                    <img id="email-icon" src="Images/mail-icon.png">
+                    <img class="icon" src="img/mail-icon.png">
                     <h3 class="contact-container-header">Email</h3>
                     <span class="contact-container-value"><a href="mailto:elvinlkw@hotmail.com">elvinlkw@hotmail.com</a></span>        
                 </div>
@@ -208,12 +202,12 @@
                 </div>
                 <div class="back">
                     <div id="linkedin-wrapper">
-                        <img src="Images/linkedin.png" id="linkedin-icon">
-                        <a target="_blank" href="https://www.linkedin.com/in/elvin-li-kam-wa-333560101/" class="social-value">linkedin.com/elvin-li-kam-wa</a>
+                        <img src="img/linkedin.png" id="linkedin-icon">
+                        <a target="_blank" href="https://www.linkedin.com/in/elvin-li-kam-wa-333560101/" class="contact-social-value">linkedin.com/elvin-li-kam-wa</a>
                     </div>
                     <div id="github-wrapper">
-                        <img src="Images/github-icon.png" id="github-icon">
-                        <a target="_blank" href="https://www.github.com/elvinlkw" class="social-value">github.com/elvinlkw</a>
+                        <img src="img/github-icon.png" id="github-icon" class="icon">
+                        <a target="_blank" href="https://www.github.com/elvinlkw" class="contact-social-value">github.com/elvinlkw</a>
                     </div>    
                 </div>
             </div>
@@ -223,7 +217,7 @@
                     <h4 class="text-front">Location</h4>
                 </div>
                 <div class="back">
-                    <img id="email-icon" src="Images/mail-icon.png">
+                    <img class="icon" src="img/mail-icon.png">
                     <h3 class="contact-container-header">Location</h3>
                     <span class="contact-container-value">Toronto, ON</span>
                 </div>
@@ -231,7 +225,6 @@
         </div>
     </section>
 
-    <script type="text/javascript" src="js/animation.js"></script>
-
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
