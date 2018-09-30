@@ -615,6 +615,15 @@ hr{
     .cb-back-content > span{
         font-size:80%;
     }
+
+    .front{
+        display:none;
+    }
+
+    .back{
+        transform:rotateX(0deg);
+        -ms-transform:rotateX(0deg);
+    }
 }
 
 @media screen and (max-width:995px), screen and (max-height:700px){
