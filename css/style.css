@@ -22,6 +22,16 @@ a{color:black;}
 
 a:hover{text-decoration:underline;}
 
+hr{
+    margin:0;
+    padding:0;
+    border:none;
+    width: 10em;
+    height:3px;
+    color:#000;
+    background:#000;
+}
+
 /* Navigation Bar Section */
 
 #nav-icon{
@@ -221,6 +231,7 @@ a:hover{text-decoration:underline;}
     text-align:justify;
     color: #1e87d6;
     font-size:1em;
+    overflow:auto;
 }
 
 /* Experience Section */
@@ -366,118 +377,87 @@ a:hover{text-decoration:underline;}
     height:100%;
 }
 
-#contact-box{
-    display:inline-block;
-    position: relative;
-    top:75px;
-    left:10%;
-    width:80%;
+#contact-box-container{
+    width:40em;
+    height: 25em;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:space-between;
+    justify-content: space-between;
 }
 
-#contact-phone-container{
-    width:275px;
-    height:150px;
-    border: 2px black solid;
-    float:left;
-    margin: 0 5% 5% 0;
-    position: relative;
-    border: 4px gray solid;
-    box-sizing: border-box;
-}
-
-#contact-email-container{
-    width:275px;
-    height:150px;
-    border: 2px black solid;
-    float:left;
+.contact-box-wrapper{
     position:relative;
-    border: 4px gray solid;
-    box-sizing: border-box;
+    width: 17em;
+    height: 11em;
+    border:5px #a9a9a9 solid;
+    box-sizing:border-box;
 }
 
-#contact-social-container{
-    width:275px;
-    height:150px;
-    border: 2px black solid;
-    float:left;
-    position:relative;
-    margin-right: 5%;
-    border: 4px gray solid;
-    box-sizing: border-box;
-}
+/* 2D rotate */
 
-#contact-location-container{
-    width:275px;
-    height:150px;
-    border: 2px black solid;
-    float:left;
-    position:relative;   
-    border: 4px gray solid;
-    box-sizing: border-box; 
-}
-
-#contact-phone-container:hover .front, 
-#contact-email-container:hover .front,
-#contact-social-container:hover .front,
-#contact-location-container:hover .front{
-    transform: rotateX(-180deg);
-    -webkit-transform: rotateX(-180deg);
-}
-
-#contact-phone-container:hover .back, 
-#contact-email-container:hover .back,
-#contact-social-container:hover .back,
-#contact-location-container:hover .back{
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
+.contact-innerbox{
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    transition:0.5s;
+    -ms-transition:auto;
+    position:absolute;
 }
 
 .front{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
     background:black;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    transition: 1s;
+    transform:rotateX(0deg);
+}
+
+.contact-box-fa{
+    filter:invert(0.5);
+    position:absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact-box-wrapper:hover .front{
+    transform:rotateX(-180deg);
+    -ms-transform:rotateX(-180deg);
 }
 
 .back{
-    background:white;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    backface-visibility: hidden;
-    transition: 1s;
-    transform: rotateX(180deg);
-    -webkit-transform: rotateX(180deg);
+    transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg);
 }
 
-.fa{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    filter:invert(0.5);
+.contact-box-wrapper:hover .back{
+    transform:rotateX(0deg);
+    -ms-transform:rotateX(0deg);
 }
 
-.text-front{
+.contact-front-text{
+    color: #ccc;
     position:absolute;
-    color:#ccc;
     left: 50%;
     top:80%;
     transform: translateX(-50%);
-    -ms-transform:translateX(-50%);
 }
 
 .icon{
     margin: 10px 0 0 10px;
+}
+
+.cb-back-content{
+    position:absolute;
+    top:50%;
+    left: 35%;
+    transform: translateY(-50%);
+}
+
+.cb-back-header{
+    font-size: 2rem;
+}
+
+.cb-back-text{
+    text-decoration:none;
 }
 
 #linkedin-wrapper{
@@ -501,8 +481,6 @@ a:hover{text-decoration:underline;}
     height:30px;
     border-radius:50%;
     flex-direction:row;
-    filter: invert(1);
-    -webkit-filter: invert(1);
 }
 
 .contact-social-value{
@@ -514,29 +492,6 @@ a:hover{text-decoration:underline;}
     margin:0;
 }
 
-.clear-float{
-    clear:both;
-}
-
-#email-icon{
-    margin: 10px 0 0 10px;
-}
-
-.contact-container-header{
-    border-bottom: 3px black solid;
-    width:125px;
-    position:relative;
-    left: 80px;
-    padding-right:50px;
-    font-size:30px;
-    
-}
-
-.contact-container-value{
-    position:relative;
-    left:80px;
-    font-size:15px;
-}
 
 @media screen and (max-width:768px){
     #lp-landing-page{
@@ -609,7 +564,6 @@ a:hover{text-decoration:underline;}
     
     .td-header{
         font-weight: bold;
-    
     }
 
     #main{
@@ -633,7 +587,7 @@ a:hover{text-decoration:underline;}
     }
 
     #about-me-writeup{
-        font-size:0.8em;
+        font-size:0.8rem;
     }
 
     #section-experience{
@@ -647,24 +601,45 @@ a:hover{text-decoration:underline;}
         font-size:0.75em;
     }
 
-    #contact-box{
-        width:275px;
+    #contact-box-container{
         position:relative;
-        left:13%;
+        width: 15em;
+        height:50em;
+        left:12%;
     }
 
-    .contact-box-mobile{
-        margin-bottom:5%;
+    hr{
+        width:9em;
     }
 
-    .front{
-        display:none;
+    .cb-back-content > span{
+        font-size:80%;
+    }
+}
+
+@media screen and (max-width:995px), screen and (max-height:700px){
+    #main{
+        flex-direction: column;
     }
 
-    .back{
-        transform: rotateX(0deg);
-        -webkit-transform: rotateX(0deg);
-        transition:0s;
+    #main{
+        flex-direction:column;
+        height:240%;
     }
 
+    #section-about-me{
+        width:100%;
+        left:0;
+        height:110%;
+    }
+
+    #about-me-container{
+        left:10%;
+        width:80%;
+    }
+
+    #section-experience{
+        width:100%;
+        height:140%;
+    }
 }

@@ -36,6 +36,12 @@ $(document).ready(function(){
         }
     });
 
+    $('.contact-box-wrapper').hover(function(){
+        $(this).find('.fa').hide();
+    }, function(){
+        $(this).find('.fa').show();
+    });
+
     var $nav_icon = $('#nav-icon');
     var $navbar = $('#navbar');
     $nav_icon.hover(function() {
