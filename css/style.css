@@ -401,14 +401,41 @@ hr{
     height:100%;
     backface-visibility:hidden;
     -ms-backface-visibility:hidden;
-    transition:0.5s;
     -ms-transition:auto;
-    position:absolute;
 }
 
 .front{
+    position:absolute;
+    top:0; left:0;
     background:black;
     transform:rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transition:1s;
+}
+
+.contact-box-wrapper:hover .front{
+    transform:rotateX(-180deg);
+    -ms-transform:rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+}
+
+.back{
+    position:absolute;
+    top:0; left:0;
+    transition:1s;
+    transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+}
+
+.contact-box-wrapper:hover .back{
+    transform:rotateX(0deg);
+    -ms-transform:rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
 }
 
 .contact-box-fa{
@@ -416,21 +443,6 @@ hr{
     position:absolute;
     top: 50%; left:50%;
     transform: translate(-50%, -50%);
-}
-
-.contact-box-wrapper:hover .front{
-    transform:rotateX(-180deg);
-    -ms-transform:rotateX(-180deg);
-}
-
-.back{
-    transform:rotateX(180deg);
-    -ms-transform:rotateX(180deg);
-}
-
-.contact-box-wrapper:hover .back{
-    transform:rotateX(0deg);
-    -ms-transform:rotateX(0deg);
 }
 
 .contact-front-text{
@@ -626,7 +638,7 @@ hr{
     }
 }
 
-@media screen and (max-width:995px), screen and (max-height:700px){
+@media screen and (max-width:995px), screen and (max-height:600px){
     #main{
         flex-direction: column;
     }
