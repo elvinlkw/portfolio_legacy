@@ -74,7 +74,7 @@ $(document).ready(function(){
     });
 
     var skillsSec = $("#main").offset().top;
-    var contactSec = $("#section-contact").offset().top;
+    var projSec = $("#section-projects").offset().top;
     
     $("#main").hover(function(){
         $nav_icon.css({
@@ -85,7 +85,7 @@ $(document).ready(function(){
     });
 
     $(window).scroll(function(){
-        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < contactSec){
+        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < projSec){
             $nav_icon.css({
                 'filter':'invert(1)',
                 '-webkit-filter': 'invert(1)',
