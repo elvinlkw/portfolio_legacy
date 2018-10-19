@@ -35,43 +35,18 @@ $(document).ready(function(){
     // Navigation section
     var $nav_icon = $('#nav-icon');
     var $navbar = $('#navbar');
-    $nav_icon.click(function() {
-        if($navbar.css("display") == "none"){
-            $navbar.css("display", "block");
-            $('#lp-landing-page').css({
-                "width": "87%",
-                "float": "right"
-            });
-            $('#main').css({
-                "width": "87%",
-                "float": "right"
-            });
-            $('#section-projects').css({
-                "width": "87%",
-                "float": "right"
-            });
-            $('#section-contact').css({
-                "width": "87%",
-                "float": "right"
-            });
-        } else{
-            $navbar.css("display", "none");
-            $('#lp-landing-page').css({
-                "width": "100%",
-                "clear": "both"
-            });
-            $('#main').css({
-                "width": "100%",
-                "clear": "both"
-            });
-            $('#section-projects').css({
-                "width": "100%",
-                "clear": "both"
-            });
-            $('#section-contact').css({
-                "width": "100%",
-                "clear": "both"
-            });
+    $(window).click(function(event){
+        if(event.target.id != 'navbar'){
+            // $navbar.css("display", "none");
+            $navbar.slideUp('slow');
+        }
+        if(event.target.id == 'nav-icon'){
+            if($navbar.css("display") == "none"){
+                $navbar.css("display", "block");
+            } else{
+                // $navbar.css("display", "none");
+                $navbar.slideUp('slow');
+            }
         }
     });
 
@@ -100,7 +75,6 @@ $(document).ready(function(){
                 'filter':'invert(1)',
                 '-webkit-filter': 'invert(1)',
                 'transition': 'all 0.5s ease-in-out'
-
             });
         }else{
             $nav_icon.css({

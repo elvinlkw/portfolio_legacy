@@ -42,13 +42,18 @@ hr{
     top:2%;
     z-index:999;
     cursor: pointer;
+    opacity: 0.5;
+}
+
+#nav-icon:hover{
+    opacity: 1;
 }
 
 #navbar{
-    width:13%;
+    width:12rem;
     height:100vh;
     display:none;
-    background:#F7F7F9;
+    background:#efefef;
     z-index:100;
     position:fixed;
     border-right: 1px lightgray solid;
@@ -101,8 +106,13 @@ hr{
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 20px solid black;
+    margin-right: 1rem;
     opacity: 0;
     transition: all 0.25s ease-in-out;
+}
+
+.nav-icon{
+    width: 1rem;
 }
 
 .nav-menu-text{
