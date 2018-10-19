@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu|Lato' rel='stylesheet'>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/typed.js"></script>
@@ -27,25 +27,28 @@
     <section id="navbar">
         <div id="navbar-header"></div>
         <div id="nav-menu-container">
-            <a href="#home"><div class="nav-menu" id="top">
+            <h3 id="nav-title">Sections</h3>
+            <a href="#home"><div class="nav-menu">
                 <div class="nav-arrow"></div>
-                <p class="nav-menu-text">HOME</p>
+                <p class="nav-menu-text">Home</p>
             </div></a>
             <a href="#about"><div class="nav-menu">
                 <div class="nav-arrow"></div>
-                <p class="nav-menu-text">EXPERIENCE</p>
+                <p class="nav-menu-text">Experience</p>
             </div></a>
-            <a href="Elvin_LiKamWa.pdf" target="_blank"><div class="nav-menu">
+            <a href="#projects"><div class="nav-menu">
                 <div class="nav-arrow"></div>
-                <p class="nav-menu-text">RESUME</p>
+                <p class="nav-menu-text">Projects</p>
             </div></a>
             <a href="#contact"><div class="nav-menu">
                 <div class="nav-arrow"></div>
-                <p class="nav-menu-text">CONTACT</p>
+                <p class="nav-menu-text">Contact</p>
+            </div></a>
+            <a href="Elvin_LiKamWa.pdf" target="_blank"><div class="nav-menu">
+                <div class="nav-arrow"></div>
+                <p class="nav-menu-text">Resume</p>
             </div></a>
         </div>
-        <img src="img/index.png" id="nav-img">
-
     </section>
 
     <section id="lp-landing-page"><a name="home"></a>
@@ -135,6 +138,7 @@
                     </div>
                     <div class="skill-arrow-content">
                         <p><span class="content-bolded">Frontend</span> :  HTML, CSS, Javascript (jQuery)</p>
+                        <p><span class="content-bolded">Framework</span> :  React JS</p>
                         <p><span class="content-bolded">Languages</span> : Python, SQL</p>
                         <p><span  class="content-bolded">Operating Systems</span> : Windows, Linux</p>
                         <p><span class="content-bolded">Software</span> : Git, SVN, JIRA</p>
@@ -172,23 +176,55 @@
         </section>
     </main>
 
-    <section id="section-projects">
+    <section id="section-projects"><a name="projects"></a>
         <div class="section-content-wrapper">
             <h1 class="section-header">Projects</h1>
             <div id="container-projects">
-                <div class="wrapper-project">
-                    <img class="project-cat-img" src="img/html-logo.png"/>
+                <div class="wrapper-project" id="anchor-html">
+                    <div class="project-category">
+                        <img class="project-cat-img" src="img/html-logo.png"/>
+                    </div>
+                    <div class="wrapper-project-text">
+                        <h3 class="project-cat-text">HTML, CSS & JS</h3>
+                    </div>
+                    <div class="modal" id="myModal">
+                        <div class="modal-content">
+                            <h1>HTML Projects</h1>
+                            <p>Here are some of the HTML and CSS projects I have worked on.</p>
+                            <a class="modal-content-link" href="https://elvinlkw.github.io" target="_blank">
+                                <div class="project">
+                                    <img class="project-img" src="img/project-portfolio.png"/>
+                                </div>
+                                <div class="project-content-description" id="proj-desc-html">
+                                    <p class="project-technology">HTML, CSS & Javascript</p>
+                                    <p class="project-text">This is my personal portfolio resume</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="wrapper-project">
-                    <img class="project-cat-img" src="img/react-logo.png"/>
-                </div>
-            </div>
-            <div id="container-projects-text">
-                <div class="wrapper-project-text">
-                    <h3 class="project-cat-text">HTML, CSS & JS</h3>
-                </div>
-                <div class="wrapper-project-text">
-                    <h3 class="project-cat-text">React JS</h3>
+                <div class="wrapper-project" id="anchor-react">
+                    <div class="project-category">
+                        <img class="project-cat-img" src="img/react-logo.png"/>
+                    </div>
+                    <div class="wrapper-project-text">
+                        <h3 class="project-cat-text">React JS</h3>
+                    </div>
+                    <div class="modal" id="myModal">
+                        <div class="modal-content">
+                            <h1>React JS Projects</h1>
+                            <p>Here are some of the React projects I have worked on.</p>
+                            <a class="modal-content-link" href="https://elvinlkw.github.io/timer-app" target="_blank">
+                                <div class="project">
+                                    <img class="project-img" src="img/project-react-timer.png"/>
+                                </div>
+                                <div class="project-content-description" id="proj-desc-react">
+                                    <p class="project-technology">React & Bootstrap 4</p>
+                                    <p class="project-text">Simple Timer App built using React JS and Bootstrap 4</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="project-github-container">
@@ -261,6 +297,7 @@
                 </div>
         </div>
     </section>
+
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

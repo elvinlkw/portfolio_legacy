@@ -1,9 +1,6 @@
-$('#navbar').hide();
-
 $(document).ready(function(){
 
     //code for arrow in Experience Section;
-
     var $skills_arrow = $('.skill-arrow');
     var $skills_bToggle = $('#experience-toggle-button');
 
@@ -18,7 +15,6 @@ $(document).ready(function(){
             }else{
                 $(this).closest('.skill-wrapper').find('.skill-arrow-content').slideToggle();
             }
-            
         }    
     });
 
@@ -36,56 +32,70 @@ $(document).ready(function(){
         }
     });
 
-    // $('.contact-box-wrapper').hover(function(){
-    //     $(this).find('.fa').hide();
-    // }, function(){
-    //     $(this).find('.fa').show('slow');
-    // });
-
+    // Navigation section
     var $nav_icon = $('#nav-icon');
     var $navbar = $('#navbar');
-    $nav_icon.hover(function() {
-        $navbar.slideDown('slow');
+    $nav_icon.click(function() {
+        if($navbar.css("display") == "none"){
+            $navbar.css("display", "block");
+            $('#lp-landing-page').css({
+                "width": "87%",
+                "float": "right"
+            });
+            $('#main').css({
+                "width": "87%",
+                "float": "right"
+            });
+            $('#section-projects').css({
+                "width": "87%",
+                "float": "right"
+            });
+            $('#section-contact').css({
+                "width": "87%",
+                "float": "right"
+            });
+        } else{
+            $navbar.css("display", "none");
+            $('#lp-landing-page').css({
+                "width": "100%",
+                "clear": "both"
+            });
+            $('#main').css({
+                "width": "100%",
+                "clear": "both"
+            });
+            $('#section-projects').css({
+                "width": "100%",
+                "clear": "both"
+            });
+            $('#section-contact').css({
+                "width": "100%",
+                "clear": "both"
+            });
+        }
     });
 
-    $navbar.hover(function(){
-        $(this).css({
-            'opacity':'1',
-            'visibility': 'visible'
-        });
-    }, function(){
-        $(this).slideUp('slow');
-    });
-
-    var $nav_menu = $('.nav-menu');
-
-    $nav_menu.hover(function(){
-        $(this).find('.nav-arrow').css({
-            "opacity":"1"
-        });
-    }, function(){
-        $(this).find('.nav-arrow').css({
-            "opacity":"0"
-        });
-    });
-
-    $nav_menu.click(function(){
-        $navbar.slideUp('slow');
-    });
-
+    // -------------------
     var skillsSec = $("#main").offset().top;
     var projSec = $("#section-projects").offset().top;
     
     $("#main").hover(function(){
-        $nav_icon.css({
-            'filter':'invert(1)',
-            '-webkit-filter': 'invert(1)',
-            'transition': 'all 0.5s ease-in-out'
-        });
+        if($navbar.css("display") == "none"){
+            $nav_icon.css({
+                'filter':'invert(1)',
+                '-webkit-filter': 'invert(1)',
+                'transition': 'all 0.5s ease-in-out'
+            });
+        } else{
+            $nav_icon.css({
+                'filter':'invert(0)',
+                '-webkit-filter': 'invert(0)'
+            });
+        }
     });
 
     $(window).scroll(function(){
-        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < projSec){
+        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < projSec && $navbar.css("display")=="none"){
             $nav_icon.css({
                 'filter':'invert(1)',
                 '-webkit-filter': 'invert(1)',
@@ -97,11 +107,29 @@ $(document).ready(function(){
                 'filter':'invert(0)',
                 '-webkit-filter': 'invert(0)',
                 'transition': 'all 0.5s ease-in-out'
-            });
-            
+            });   
         }
     });
 
+
+    // Code for modal pop up in project section
+    var $project = $('.wrapper-project');
+
+    $project.click(function() {
+        $(this).find('.modal').css('display', 'block');
+        $(this).find('.modal-content').slideDown();
+        $('body').css('overflow', 'hidden');
+    });
+
+    $(window).click(function(event){
+        if(event.target.id == 'myModal'){
+            $('.modal-content').slideUp();
+            $('.modal').css("display", "none");
+            $('body').css('overflow', 'auto');
+        }
+    });
+
+    // Typing animation for landing and about me page.
     var lp_animation = new Typed('#lp-animation', {
         strings: ['Welcome to my mini portfolio website . . . ^1000', 'Let me tell you more about myself.'],
         typeSpeed: 30,
