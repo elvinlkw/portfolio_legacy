@@ -212,7 +212,7 @@ hr{
 
 #section-about-me{
     width:50%;
-    height:100%;
+    height:auto;
     position:relative;
 }
 
@@ -679,6 +679,7 @@ hr{
 
 
 @media screen and (max-width:768px){
+/* @media screen and (max-width:1000px){ */
     #lp-landing-page{
         flex-direction: column;
         align-items: center;
@@ -753,13 +754,13 @@ hr{
 
     #main{
         flex-direction:column;
-        height:240%;
+        height:250%;
     }
 
     #section-about-me{
         width:100%;
         left:0;
-        height:110%;
+        height:130%;
     }
 
     #about-me-container{
@@ -773,6 +774,7 @@ hr{
 
     #about-me-writeup{
         font-size:0.8rem;
+        text-align: justify;
     }
 
     #section-experience{
@@ -780,11 +782,97 @@ hr{
         height:140%;
     }
 
-    .skill-arrow-content,
-    .skill-arrow-text,
-    #skill-arrow-content-mobile{
-        font-size:0.75em;
+    .skill-arrow-text{
+        font-size: 0.75em;
     }
+
+    .skill-arrow-content > p,
+    #skill-arrow-content-mobile > p{
+        font-size: 0.75em;
+        padding-left: 2em;
+    }
+
+    /* Projects Section */
+
+    #section-projects{
+        height: auto;
+        padding: 3em 0;
+    }
+
+    .section-content-wrapper > p{
+        font-size: 0.8em;
+    }
+
+    #container-projects{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper-project{
+        width: 10em;
+        height: 10em;
+        margin-bottom: 2em;
+    }
+
+    .project-category{
+        width: 10em;
+        height: 7em;
+    }
+
+    .project-cat-img{
+        width: 7em;
+    }
+
+    .wrapper-project-text{
+        width: 10em;
+        height: 3em;
+    }
+
+    .modal-content{
+        width: 75%;
+        height: 75%;
+    }
+
+    .modal-content > p{
+        font-size: 0.8em;
+    }
+
+    .modal-content-link{
+        height: 10em;
+        width: 10em;;
+    }
+
+    .project{
+        height: 7em;
+        margin-right: 0;
+    }
+
+    .project-content-description{
+        height: 3em;
+    }
+
+    .project-technology{
+        display:none;
+    }
+
+    .project-text{
+        font-size: 0.75em;
+        width: 80%;
+        text-align:center;
+        margin: 0 auto;
+    }
+
+    #proj-github-icon{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    
+    #proj-github-text{
+        font-size: 0.8em;
+        line-height: 2.5rem;
+    }
+
+    /* Contact Section */
 
     #contact-box-container{
         position:relative;
@@ -808,32 +896,5 @@ hr{
     .back{
         transform:rotateX(0deg);
         -ms-transform:rotateX(0deg);
-    }
-}
-
-@media screen and (max-width:995px), screen and (max-height:600px){
-    #main{
-        flex-direction: column;
-    }
-
-    #main{
-        flex-direction:column;
-        height:240%;
-    }
-
-    #section-about-me{
-        width:100%;
-        left:0;
-        height:110%;
-    }
-
-    #about-me-container{
-        left:10%;
-        width:80%;
-    }
-
-    #section-experience{
-        width:100%;
-        height:140%;
     }
 }
