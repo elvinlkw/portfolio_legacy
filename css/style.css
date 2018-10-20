@@ -213,13 +213,12 @@ hr{
 #section-about-me{
     width:50%;
     height:auto;
+    min-height: 100vh;
     position:relative;
 }
 
-#about-me-container{
-    position:absolute;
-    top:8%;
-    left:20%;
+.experience-container{
+    margin: 5rem auto;
     width:80%;
 }
 
@@ -754,18 +753,13 @@ hr{
 
     #main{
         flex-direction:column;
-        height:250%;
+        min-height: 250vh;
     }
 
     #section-about-me{
         width:100%;
         left:0;
         height:130%;
-    }
-
-    #about-me-container{
-        left:10%;
-        width:80%;
     }
 
     #about-me-animation{
