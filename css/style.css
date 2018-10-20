@@ -252,14 +252,6 @@ hr{
     height:100%;
 }
 
-.section-content-wrapper{
-    position:relative;
-    top:8%;
-    left:10%;
-    width:80%;
-}
-
-
 /* Toggle Button */
 #experience-toggle-button{
     position:relative;
@@ -386,8 +378,16 @@ hr{
 
 #section-projects{
     width:100%;
-    height:100%;
+    height: auto;
     background: #faf9f9;
+    padding: 5rem 0;
+}
+
+.section-content-wrapper{
+    position:relative;
+    top:8%;
+    left:10%;
+    width:80%;
 }
 
 #container-projects{
@@ -871,12 +871,19 @@ hr{
     #contact-box-container{
         position:relative;
         width: 15em;
-        height:50em;
+        height:40em;
         left:12%;
+        margin-bottom: 3em;
+    }
+
+    .contact-box-wrapper{
+        width: 14em;
+        height: 9em;
+        border: 2px solid lightgray;
     }
 
     hr{
-        width:9em;
+        width:8.5em;
     }
 
     .cb-back-content > span{
