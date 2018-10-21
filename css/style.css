@@ -53,10 +53,10 @@ hr{
     width:12rem;
     height:100vh;
     display:none;
-    background:#efefef;
+    background: #e7ac62;
     z-index:100;
     position:fixed;
-    border-right: 1px lightgray solid;
+    border-right: 1px #908d59 solid;
 }
 
 #navbar-header{
@@ -64,7 +64,7 @@ hr{
     height:15%;
     border-bottom: 1px #737373 solid;
     margin-bottom: 1rem;
-    background: #efefef;
+    background: #e7ac62;
 }
 
 #nav-menu-container{
