@@ -252,37 +252,47 @@ hr{
     height:100%;
 }
 
-/* Toggle Button */
-#experience-toggle-button{
-    position:relative;
-    width:30px;
-    height:17px;
-    -webkit-appearance:none;
-    -moz-appearance: none;
-    -ms-appearance:none;
+/* Toggle Slider Button */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(0deg, #333, #000);
-    outline:none;
-    border-radius: 20px;
+    -webkit-transition: .4s;
+    -ms-transition: .4s;
+    -moz-transition: .4s;
+    transition: .4s;
     box-shadow: 0 0 0 1px #353535, 0 0 0 1.2px #3e3e3e,
         inset 0 0 2.5px rgba(0,0,0,1),
         0 1.2px 5px rgba(0,0,0,0.5),
         inset 0 0 2.4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 3vh;
+
+    /*  */
+    
 }
 
-#experience-toggle-button:checked{
-    background: linear-gradient(0deg, #6dd1ff, #20b7ff);
-    box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535,
-        0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1),
-        0 5px 20px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.2);
-}
-
-#experience-toggle-button:before{
+.slider:before {
     content:'';
     position:absolute;
     top: 0.8px; left:0.7px;
     width:20px;
-    height:16px;
+    height:15.5px;
     background:linear-gradient(0deg, #000, #6b6b6b);
     border-radius:20px;
     box-shadow: 0 0 0 0.4px #232323;
@@ -290,15 +300,11 @@ hr{
     transition: 0.5s;
 }
 
-#experience-toggle-button:checked:before{
-    left:10px;
-}
-
-#experience-toggle-button:after{
+.slider:after{
     content:'';
     position:absolute;
     top: calc(50% - 2px);
-    left: 10px;
+    left: 13px;
     width:2px;
     height:2px;
     background: linear-gradient(0deg, #000, #6b6b6b);
@@ -311,10 +317,31 @@ hr{
     transition: 0.5s;
 }
 
-#experience-toggle-button:checked::after{
-    background:#63cdff;
+input:checked + .slider{
+    background: linear-gradient(0deg, #6dd1ff, #20b7ff);
+    box-shadow: 0 0 2px #6dd1ff, 0 0 0 2px #353535,
+        0 0 0 2px #3e3e3e, inset 0 0 2px rgba(0,0,0,1),
+        0 2px 2px rgba(0,0,0,0.5), inset 0 0 2px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(8.5px);
+    -ms-transform: translateX(8.5px);
+    transform: translateX(8.5px);
+}
+
+input:checked + .slider:after{
     left:23px;
-    box-shadow: 0 0 1.2px #13b3ff, 0 0 3px #13b3ff;
+    background:#63cdff;
+	box-shadow: 0 0 1.2px #13b3ff, 0 0 3px #13b3ff;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 /* End of Toggle Button */

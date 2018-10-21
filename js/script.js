@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     //code for arrow in Experience Section;
     var $skills_arrow = $('.skill-arrow');
-    var $skills_bToggle = $('#experience-toggle-button');
+    var $skills_bToggle = $('input');
 
     $skills_arrow.click(function() {
         if($skills_bToggle.is(':checked')){}
