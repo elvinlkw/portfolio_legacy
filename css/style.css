@@ -53,7 +53,7 @@ hr{
     width:12rem;
     height:100vh;
     display:none;
-    background: #e7ac62;
+    background: #eee;
     z-index:100;
     position:fixed;
     border-right: 1px #908d59 solid;
@@ -64,7 +64,7 @@ hr{
     height:15%;
     border-bottom: 1px #737373 solid;
     margin-bottom: 1rem;
-    background: #e7ac62;
+    background: #eee;
 }
 
 #nav-menu-container{
@@ -92,7 +92,7 @@ hr{
 }
 
 .nav-menu:hover{
-    background: beige;
+    background: darkgray;
 }
 
 .nav-menu:hover > .nav-arrow{
@@ -122,6 +122,11 @@ hr{
 }
 
 /* Landing Page Section */
+
+#main-component{
+    width: 100%;
+    height: 100%;
+}
 
 #lp-landing-page{
     width:100%;
