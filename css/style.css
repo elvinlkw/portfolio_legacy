@@ -711,6 +711,10 @@ input:checked + .slider:after{
 
 @media screen and (max-width:768px){
 /* @media screen and (max-width:1000px){ */
+    #main-component{
+        width: 100%;
+    }
+
     #lp-landing-page{
         flex-direction: column;
         align-items: center;

@@ -40,9 +40,12 @@ $(document).ready(function(){
     var mainWidth = bodyWidth - navWidth;
     
     $(window).resize(function(){
-        bodyWidth = $(window).width() / parseInt($('html').css('font-size'));
-        mainWidth = bodyWidth - navWidth;
-        $main.css('width', mainWidth+'rem');
+        // This will only trigger when not on mobile.
+        if($(window).width() > 768){
+            bodyWidth = $(window).width() / parseInt($('html').css('font-size'));
+            mainWidth = bodyWidth - navWidth;
+            $main.css('width', mainWidth+'rem');
+        }
     });
 
     $(window).click(function(event){
