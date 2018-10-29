@@ -36,11 +36,11 @@ hr{
 /* Navigation Bar Section */
 
 .site-header{
-    width: 90%;
+    width: 92%;
     position: fixed;
     top: 0;
     left:0;
-    padding: 50px 60px 0;
+    padding-top: 3rem;
     z-index: 999;
 }
 
@@ -53,8 +53,8 @@ hr{
 .burger span{
     position:relative;
     display:block;
-    width:30px;
-    height: 30px;
+    width:2rem;
+    height: 2rem;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -106,26 +106,31 @@ body.menu-opened .site-header .burger span::after {
     z-index: 998;
 }
 
-.container{
+.site-menu{
     position: fixed;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
 }
 
-.container ul{
+.site-menu ul{
     list-style: none;
 }
 
-.container ul li{
-    font-size: 2rem;
+.site-menu ul li{
     padding: 1rem;
-    color: #c1272d;
 }
 
-.container ul li:hover{
+.site-menu ul li a{
+    font-size: 2rem;
+    color: #c1272d;
+    text-decoration: none;
+}
+
+.site-menu ul li a:hover{
     color: #ee907b;
     animation-delay: 0.075s;
+    text-decoration: none;
 }
 
 /* Landing Page Section */
@@ -413,6 +418,7 @@ input:checked + .slider:after{
 #section-projects{
     width:100%;
     height: auto;
+    min-height: 100vh;
     background: #faf9f9;
     padding: 5rem 0;
 }

@@ -32,8 +32,14 @@ $(document).ready(function(){
         }
     });
 
+    //site-header section
+
     $('.burger').click(function(){
         $('body').toggleClass('menu-opened');
+        $('.site-navigation').fadeToggle();
+    });
+
+    $('.site-item').click(function(){
         $('.site-navigation').fadeToggle();
     });
 
