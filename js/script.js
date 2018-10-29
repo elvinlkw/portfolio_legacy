@@ -40,42 +40,32 @@ $(document).ready(function(){
     });
 
     $('.site-item').click(function(){
+        $('body').toggleClass('menu-opened');
         $('.site-navigation').fadeToggle();
     });
 
-
-    // -------------------
     var skillsSec = $("#main").offset().top;
     var projSec = $("#section-projects").offset().top;
-    
-    $("#main").hover(function(){
-        if($navbar.css("display") == "none"){
-            $nav_icon.css({
-                'filter':'invert(1)',
-                '-webkit-filter': 'invert(1)',
-                'transition': 'all 0.5s ease-in-out'
-            });
-        } else{
-            $nav_icon.css({
-                'filter':'invert(0)',
-                '-webkit-filter': 'invert(0)'
-            });
-        }
-    });
+    var contactSec = $('#section-contact').offset().top;
 
     $(window).scroll(function(){
-        if($(window).scrollTop() > skillsSec && $(window).scrollTop() < projSec && $navbar.css("display")=="none"){
-            $nav_icon.css({
-                'filter':'invert(1)',
-                '-webkit-filter': 'invert(1)',
-                'transition': 'all 0.5s ease-in-out'
-            });
-        }else{
-            $nav_icon.css({
-                'filter':'invert(0)',
-                '-webkit-filter': 'invert(0)',
-                'transition': 'all 0.5s ease-in-out'
-            });   
+        let $window = $(window).scrollTop();
+        console.log($window)
+        if($window < 3*skillsSec/4){
+            $('#site-home').addClass('bold');
+            $('#site-about').removeClass('bold')
+        }if($window > 3*skillsSec/4 && $window < 3*projSec/4){
+            $('#site-about').addClass('bold');
+            $('#site-home').removeClass('bold');
+            $('#site-project').removeClass('bold');
+        }if($window > 3*projSec/4 && $(window < 3*contactSec/4)){
+            $('#site-project').addClass('bold');
+            $('#site-about').removeClass('bold');
+            $('#site-contact').removeClass('bold');
+        }if($window > 3*contactSec/4){
+            console.log('inside')
+            $('#site-contact').addClass('bold');
+            $('#site-project').removeClass('bold');
         }
     });
 
