@@ -32,40 +32,6 @@ $(document).ready(function(){
         }
     });
 
-    var $nav_icon = $('#nav-icon');
-    var $navbar = $('#navbar');
-    var $main = $('#main-component');
-    var navWidth = $navbar.width() / parseInt($('html').css('font-size'));
-    var bodyWidth = $(window).width() / parseInt($('html').css('font-size'));
-    var mainWidth = bodyWidth - navWidth;
-    
-    $(window).resize(function(){
-        // This will only trigger when not on mobile.
-        if($(window).width() > 768){
-            bodyWidth = $(window).width() / parseInt($('html').css('font-size'));
-            mainWidth = bodyWidth - navWidth;
-            $main.css('width', mainWidth+'rem');
-        }
-    });
-
-    $(window).click(function(event){
-        if(event.target.id == 'nav-icon'){
-            if($navbar.css("display") == "none"){
-                $navbar.css("display", "block");
-                $main.css({
-                    'width': mainWidth+'rem',
-                    'float': 'right'
-                });
-            } else{
-                $navbar.css("display", "none");
-                $main.css({
-                    'width': '100%',
-                    'float': 'right'
-                });
-            }
-        }
-    });
-
     // -------------------
     var skillsSec = $("#main").offset().top;
     var projSec = $("#section-projects").offset().top;
