@@ -124,6 +124,7 @@ body.menu-opened .site-header .burger span::after {
     font-size: 2rem;
     color: #c1272d;
     text-decoration: none;
+    letter-spacing: 2px;
 }
 
 .site-menu ul li a:hover{
