@@ -129,14 +129,25 @@ body.menu-opened .site-header .burger span::after {
     padding: 1rem;
 }
 
-.site-menu ul li a{
+.site-arrow{
+    width:0; height:0;
+    border-left: 15px #c1272d solid;
+    border-top: 15px transparent solid;
+    border-bottom: 15px transparent solid;
+    border-right: 15px transparent solid;
+    position:absolute;
+    left: -15px;
+    display:none;
+}
+
+.site-item{
     font-size: 2rem;
     color: #c1272d;
     text-decoration: none;
     letter-spacing: 2px;
 }
 
-.site-menu ul li a:hover{
+.site-item:hover{
     color: #ee907b;
     animation-delay: 0.075s;
     text-decoration: none;
