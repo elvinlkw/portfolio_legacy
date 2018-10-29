@@ -98,11 +98,12 @@ body.menu-opened .site-header .burger span::after {
 
 .site-navigation{
     display:none;
-    background: #ddddddf4;
+    background: #dddddd;
     position: fixed;
     top:0; left:0;
     right:0; bottom:0;
     z-index: 998;
+    opacity:0.95;
 }
 
 .site-menu{
