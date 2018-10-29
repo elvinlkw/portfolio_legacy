@@ -75,6 +75,10 @@ hr{
     transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.burger:hover span::before{
+    border-top: 3px solid #c1272d;
+}
+
 .burger span::after{
     transform: translate(0, 6px);
     content: '';
@@ -86,6 +90,10 @@ hr{
     top: 50%;
     margin-top: -1px;
     transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger:hover span::after{
+    border-top: 3px solid #c1272d;
 }
 
 body.menu-opened .site-header .burger span::before {
