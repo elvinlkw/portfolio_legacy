@@ -32,6 +32,12 @@ $(document).ready(function(){
         }
     });
 
+    $('.burger').click(function(){
+        $('body').toggleClass('menu-opened');
+        $('.site-navigation').fadeToggle();
+    });
+
+
     // -------------------
     var skillsSec = $("#main").offset().top;
     var projSec = $("#section-projects").offset().top;
