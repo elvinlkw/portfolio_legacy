@@ -2,11 +2,11 @@ $(document).ready(function(){
 
     //code for arrow in Experience Section;
     var $skills_arrow = $('.skill-arrow');
-    var $skills_bToggle = $('input');
+    // var $skills_bToggle = $('input');
 
     $skills_arrow.click(function() {
-        if($skills_bToggle.is(':checked')){}
-        else{
+        // if($skills_bToggle.is(':checked')){}
+        // else{
             $(this).toggleClass("rotated");
             if($(document).width() < 768){
                 $(this).closest('.skill-wrapper').find('.skill-arrow-content').slideToggle();
@@ -15,22 +15,22 @@ $(document).ready(function(){
             }else{
                 $(this).closest('.skill-wrapper').find('.skill-arrow-content').slideToggle();
             }
-        }    
+        // }    
     });
 
-    $skills_bToggle.click(function() {
-        if($(document).width() < 768){
-            $('.skill-arrow-content').slideToggle();
-                $(".hidden-mobile").hide();
-                $('#skill-arrow-content-mobile').slideToggle();
-        }else{
-            $('.skill-arrow-content').slideToggle();
-        }
+    // $skills_bToggle.click(function() {
+    //     if($(document).width() < 768){
+    //         $('.skill-arrow-content').slideToggle();
+    //             $(".hidden-mobile").hide();
+    //             $('#skill-arrow-content-mobile').slideToggle();
+    //     }else{
+    //         $('.skill-arrow-content').slideToggle();
+    //     }
 
-        if($skills_bToggle.not(':checked')){
-            $($skills_arrow).toggleClass("rotated");
-        }
-    });
+    //     if($skills_bToggle.not(':checked')){
+    //         $($skills_arrow).toggleClass("rotated");
+    //     }
+    // });
 
     //site-header section
 
@@ -102,12 +102,6 @@ $(document).ready(function(){
         backSpeed: 30,
         smartBackspace: true,
         loop: true
-    });
-
-    var about_me_animation = new Typed('#about-me-animation', {
-        strings: ['Hi, I\'m Elvin . . .^5000  and this is my story! ^2000'],
-        typeSpeed: 30,
-        loop:true
     });
 
     //Smooth-Scrolling Code

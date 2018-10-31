@@ -252,7 +252,7 @@ body.menu-opened .site-header .burger span::after {
 
 .experience-container{
     margin: 5rem auto;
-    width:80%;
+    width:90%;
 }
 
 .section-header{
@@ -263,20 +263,15 @@ body.menu-opened .site-header .burger span::after {
     margin-bottom: 1em;
 }
 
-#about-me-animation{
-    font-weight: bold;
-    font-size: 1.2em;
-    display:inline-block;
-    color: #FFD700;
-    margin-bottom: 1em;
-}
-
 #about-me-writeup{
     width:100%;
     text-align:justify;
     color: #1e87d6;
-    font-size:1em;
     overflow:auto;
+}
+
+#about-me-writeup p{
+    font-size: 1.1rem;
 }
 
 /* Experience Section */
@@ -396,21 +391,20 @@ input:checked + .slider:after{
     float:left;
     width:0;
     height:0;
-    border-top:8px solid transparent;
-    border-bottom:8px solid transparent;
-    border-left:8px solid #ff6e00;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:8px solid #ff6e00;
     transition: all 0.5s ease-in-out;
+    margin-top: 2px;
     margin-right:10px;
 }
 
 .skill-arrow:hover{
-    border-top:8px solid transparent;
-    border-bottom:8px solid transparent;
-    border-left:8px solid #0078ff;
+    border-top:8px solid #0078ff;
 }
 
 .skill-arrow.rotated{
-    transform : rotate(90deg); 
+    transform : rotate(-90deg); 
 }
 
 .skill-arrow-text{
@@ -422,7 +416,7 @@ input:checked + .slider:after{
 .skill-arrow-content{
     color:#ff6e00;
     padding-left: 2.5vw;
-    display:none;
+    display:block;
 }
 
 #skill-arrow-content-mobile{
@@ -824,10 +818,6 @@ input:checked + .slider:after{
         left:0;
         height:130%;
         padding-left:0;
-    }
-
-    #about-me-animation{
-        font-size:0.8em;
     }
 
     #about-me-writeup{
