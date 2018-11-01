@@ -1,37 +1,5 @@
 $(document).ready(function(){
 
-    //code for arrow in Experience Section;
-    var $skills_arrow = $('.skill-arrow');
-    // var $skills_bToggle = $('input');
-
-    $skills_arrow.click(function() {
-        // if($skills_bToggle.is(':checked')){}
-        // else{
-            $(this).toggleClass("rotated");
-            if($(document).width() < 768){
-                $(this).closest('.skill-wrapper').find('.skill-arrow-content').slideToggle();
-                $(".hidden-mobile").hide();
-                $(this).closest('.skill-wrapper').find($('#skill-arrow-content-mobile')).slideToggle();
-            }else{
-                $(this).closest('.skill-wrapper').find('.skill-arrow-content').slideToggle();
-            }
-        // }    
-    });
-
-    // $skills_bToggle.click(function() {
-    //     if($(document).width() < 768){
-    //         $('.skill-arrow-content').slideToggle();
-    //             $(".hidden-mobile").hide();
-    //             $('#skill-arrow-content-mobile').slideToggle();
-    //     }else{
-    //         $('.skill-arrow-content').slideToggle();
-    //     }
-
-    //     if($skills_bToggle.not(':checked')){
-    //         $($skills_arrow).toggleClass("rotated");
-    //     }
-    // });
-
     //site-header section
 
     $('.burger').click(function(){
@@ -42,6 +10,32 @@ $(document).ready(function(){
     $('.site-item').click(function(){
         $('body').toggleClass('menu-opened');
         $('.site-navigation').fadeToggle();
+    });
+
+    //code for arrow in Experience Section;
+    var $skills_arrow = $('.skill-arrow');
+    var $toggle_button = $('input');
+    $skills_arrow.click(function() {
+            $(this).toggleClass("rotated");
+            if($(document).width() < 768){
+                $('.hidden-mobile').hide();
+                $(this).closest('.skill-wrapper').find($('#skill-arrow-content-mobile')).slideToggle();
+            }
+            $(this).closest('.skill-wrapper').find('.skill-arrow-content').slideToggle();
+            $(this).closest('.skill-wrapper').find('.skill-outro').fadeToggle();
+            $(this).closest('.skill-wrapper').find('.default-outro').fadeToggle();
+    });
+
+    $toggle_button.click(function(){
+        $skills_arrow.toggleClass('rotated');
+        $('.skill-arrow-content').slideToggle();
+        $('.skill-outro').fadeToggle();
+        $('.default-outro').fadeToggle();
+        if($(document).width() < 768){
+            $('.hidden-mobile').hide();
+            $('#skill-arrow-content-mobile').slideToggle();
+        }
+        
     });
 
     var skillsSec = $("#main").offset().top;

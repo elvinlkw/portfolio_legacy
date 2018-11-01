@@ -39,19 +39,14 @@ hr{
 
 /* Navigation Bar Section */
 
-.site-header{
-    width: 92%;
+.burger{
     position: fixed;
     top: 0;
-    left:0;
-    padding-top: 3rem;
+    right: 0;
+    margin-top: 3rem;
+    margin-right: 6rem;
     z-index: 999;
-}
-
-.burger{
-    float: right;
     cursor: pointer;
-    margin-top: 8px;
 }
 
 .burger span{
@@ -96,11 +91,11 @@ hr{
     border-top: 3px solid #c1272d;
 }
 
-body.menu-opened .site-header .burger span::before {
+body.menu-opened .burger span::before {
     transform: translate(0, 0) rotate(-45deg);
 }
 
-body.menu-opened .site-header .burger span::after {
+body.menu-opened .burger span::after {
     transform: translate(0, 0) rotate(45deg);
 }
 
@@ -112,6 +107,13 @@ body.menu-opened .site-header .burger span::after {
     right:0; bottom:0;
     z-index: 998;
     opacity:0.95;
+}
+
+#nav-img{
+    width: 125px;
+    position: fixed;
+    top: 0; left: 0;
+    margin: 3rem 0 0 3rem;
 }
 
 .site-menu{
@@ -159,60 +161,52 @@ body.menu-opened .site-header .burger span::after {
     width:100%;
     height:100%;
     display:flex;
-    flex-direction: row;
-}
-
-#lp-img-container{
-    width:30%;
-    height:100%;
-}
-
-#lp-img{
-    position:relative;
-    border-radius:50%;
-    width:70%;
-    height:auto;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    flex-direction:column;
 }
 
 #lp-header-container{
-    width:70%;
-    height:100%;
+    width:100%;
+    height:80%;
     position:relative;
+    display: flex;
 }
 
 #lp-header-wrapper{
-    position:absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-30%, -30%);
+    margin-top: 9rem;
+    margin-left: 5%;
+}
+
+#lp-logo{
+    margin-top: 7rem;
+    margin-left: 14%;
+    margin-right: 2rem;
+    width: 310px;
+    height: 300px;
 }
 
 #lp-header-wrapper > h1 {
-    font-size:5vw;
+    font-size:5rem;
 }
 
 #lp-header-wrapper > h3{
-    padding-top: 0.5em;
+    padding-top: 0.5rem;
     font-weight:normal;
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 #lp-animation{
-    font-size: 1.3vw;
+    font-size: 1.3rem;
     margin-top:5%;
     display:inline-block;
 }
 
 #lp-contact-wrapper{
     border-top: 1px #d3d3d3 solid;
-    padding-top: 1em;
+    padding-top: 1rem;
     position:relative;
     margin: 0 auto;
-    top:80%;
-    width:70%;
+    height: auto;
+    width:70vw;
     display:block;
 }
 
@@ -222,9 +216,9 @@ body.menu-opened .site-header .burger span::after {
 
 .lp-text{
     width: 20%;
-    font-size:1vw;
+    font-size:1rem;
     margin: 0 auto;
-    padding-bottom:1em;
+    padding-bottom:1rem;
 }
 
 #lp-contact-wrapper-mobile{
@@ -265,20 +259,23 @@ body.menu-opened .site-header .burger span::after {
 
 #about-me-writeup{
     width:100%;
-    text-align:justify;
     color: #1e87d6;
     overflow:auto;
 }
 
 #about-me-writeup p{
     font-size: 1.1rem;
+    width: 95%;
+    text-align: justify;
+    line-height:1.8rem;
+    word-spacing: 0px;
 }
 
 /* Experience Section */
 #section-experience{
     width:50%;
-    height:auto;
-    min-height: 100vh;
+    height: auto;
+    min-height: 110vh;
     padding-right: 5%;
 }
 
@@ -391,11 +388,11 @@ input:checked + .slider:after{
     float:left;
     width:0;
     height:0;
-    border-left:8px solid transparent;
-    border-right:8px solid transparent;
-    border-top:8px solid #ff6e00;
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+    border-top:6px solid #ff6e00;
     transition: all 0.5s ease-in-out;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-right:10px;
 }
 
@@ -411,6 +408,21 @@ input:checked + .slider:after{
     font-size: 1em;
     font-weight:bold;
     color: #1e87d6;
+}
+
+.skill-outro{
+    display: none;
+    font-size: 1em;
+    font-weight:bold;
+    color:grey;
+    /* color:#AC6A22; */
+}
+
+.default{
+    font-size: 1em;
+    font-weight:bold;
+    color:grey;
+    /* color:#AC6A22; */
 }
 
 .skill-arrow-content{
@@ -437,7 +449,7 @@ input:checked + .slider:after{
     height: auto;
     min-height: 100vh;
     background: #faf9f9;
-    padding: 5rem 0;
+    padding-top:5rem;
 }
 
 .section-content-wrapper{
@@ -737,43 +749,39 @@ input:checked + .slider:after{
 @media screen and (max-width:768px){
 
     #lp-landing-page{
-        flex-direction: column;
         align-items: center;
     }
 
-    #nav-icon{
-        display:none;
-    }
-
-    #lp-img-container{
-        height:30%;
-    }
-
     #lp-header-container{
-        height:70%;
+        height:auto;
+        flex-direction: column;
+    }
+    
+    #lp-logo{
+        margin:2em auto;
+        width: 30%;
+        height: 30%;
     }
 
     #lp-header-wrapper{
-        left:50%;
-        top:10%;
-        transform: translateX(-50%);
-    }
-
-    #lp-img{
-        margin-top:20px;
+        margin: 0 auto;
+        padding-bottom: 3em;
+        line-height: 2.4em;
     }
 
     #lp-header-wrapper > h1{
-        font-size: 6vw;
-        padding-bottom:5px;
+        font-size: 2em;
     }
 
     #lp-header-wrapper > h3{
-        font-size:3vw;
+        font-size:1em;
+        padding: 0;
     }
 
     #lp-animation{
-        font-size:2vw;
+        font-size:0.6em;
+        padding: 0;
+        margin: 0;
     }
 
     .typed-cursor{
@@ -792,43 +800,54 @@ input:checked + .slider:after{
         font-size:75%;
         border:1px solid black;
         position:relative;
-        top: 30vh;
         margin: 0 auto;
         border-collapse: collapse;
-        width: 60%;
+        width: 20em;
         text-align:center;
+        height: 8em;
     }
     
     td{
         border-bottom:1px solid black;
         border-right:1px solid black;
+        vertical-align: middle;
     }
     
     .td-header{
         font-weight: bold;
     }
 
+    /* Experience Section */
+
     #main{
         flex-direction:column;
-        min-height: 250vh;
+        height: auto;
     }
 
     #section-about-me{
         width:100%;
         left:0;
-        height:130%;
+        height:auto;
+        min-height:auto;
         padding-left:0;
     }
 
     #about-me-writeup{
-        font-size:0.8rem;
-        text-align: justify;
+        margin-left: 2%;
+    }
+
+    #about-me-writeup p{
+        font-size: 0.8em;
     }
 
     #section-experience{
         width:100%;
         height:140%;
         padding-right:0;
+    }
+
+    .experience-container{
+        width: 80%;
     }
 
     .skill-arrow-text{
@@ -839,6 +858,14 @@ input:checked + .slider:after{
     #skill-arrow-content-mobile > p{
         font-size: 0.75em;
         padding-left: 2em;
+    }
+
+    .hidden-mobile{
+        display:none;
+    }
+
+    #skill-arrow-content-mobile{
+        display: block;
     }
 
     /* Projects Section */
