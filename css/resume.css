@@ -5,6 +5,7 @@ body{
     margin-bottom: 3rem;
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     background-color:#EEEEEE;
+    overflow-x:hidden;
 }
 
 p{
@@ -141,4 +142,101 @@ p{
     font-size: 0.8rem;
     padding-bottom:0.5rem;
     opacity: 0.7;
+}
+
+@media (max-width: 768px){
+    #container{
+        margin: 0;
+        width: 100%;
+    }
+
+    .top-container{
+        padding-bottom: 1em;
+    }
+
+    .header-container{
+        width:65%;
+    }
+
+    .contact-container{
+        width:35%;
+    }
+
+    .wrapper-contact p{
+        font-size: 0.7em;
+    }
+
+    .header-wrapper{
+        padding-left:1em;
+    }
+
+    .header-wrapper a{
+        font-size: 0.7em;
+    }
+
+    #header-name{
+        font-size: 1.7em;
+    }
+
+    .main{
+        padding-bottom: 0;
+    }
+
+    .main-section{
+        padding-left: 1em;
+        width:65%;
+    }
+
+    .section-header{
+        font-size: 0.8em;
+    }
+
+    .item{
+        padding-bottom:1.5em;
+    }
+
+    .company-header{
+        font-size: 0.75em;
+    }
+
+    .company-duration{
+        font-size: 0.65em;
+    }
+
+    .company-description{
+        font-size: 0.7em;
+    }
+
+    .project-header{
+        font-size:0.8em;
+    }
+
+    .project-url{
+        font-size: 0.7em;
+    }
+
+    .project-description{
+        font-size: 0.65em;
+    }
+
+    .side-section{
+        width: 35%;
+    }
+
+    .skills-sub-section{
+        padding-bottom: 1.5em;
+    }
+
+    .skills{
+        font-size: 0.65em;
+    }
+
+    .education-sub-section{
+        width:100%;
+        padding-bottom: 1.5em;
+    }
+
+    .relevant-courses{
+        font-size: 0.65em;
+    }
 }
