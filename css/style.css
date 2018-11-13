@@ -746,6 +746,29 @@ input:checked + .slider:after{
     margin:0;
 }
 
+@media screen and (max-width: 1400px) and (min-width:768px){
+    .modal-content-link{
+        width: 15em;
+        height:15em;
+    }
+
+    .project{
+        height:10em;
+    }
+
+    .project-content-description{
+        height:5em;
+    }
+
+    .project-technology{
+        font-size:1em;
+    }
+
+    .project-text{
+        font-size: 0.8em;
+    }
+}
+
 
 @media screen and (max-width:768px){
 
@@ -849,6 +872,7 @@ input:checked + .slider:after{
 
     .experience-container{
         width: 80%;
+        padding-left:10%;
     }
 
     .skill-arrow-text{
@@ -915,17 +939,18 @@ input:checked + .slider:after{
     }
 
     .modal-content-link{
-        height: 10em;
-        width: 10em;;
+        height: 8em;
+        width: 8em;;
     }
 
     .project{
-        height: 7em;
+        height: 8em;
         margin-right: 0;
     }
 
     .project-content-description{
-        height: 3em;
+        height: 0;
+        display:none;
     }
 
     .project-technology{
