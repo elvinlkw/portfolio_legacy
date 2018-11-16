@@ -21,8 +21,6 @@ ul{
 
 a{color:black;}
 
-a:hover{text-decoration:underline;}
-
 hr{
     margin:0;
     padding:0;
@@ -221,6 +219,10 @@ body.menu-opened .burger span::after {
     padding-bottom:1rem;
 }
 
+.lp-text a{
+    text-decoration: underline;
+}
+
 #lp-contact-wrapper-mobile{
     display:none;
 }
@@ -309,10 +311,7 @@ body.menu-opened .burger span::after {
     box-shadow: 0 0 0 1px #353535, 0 0 0 1.2px #3e3e3e,
         inset 0 0 2.5px rgba(0,0,0,1),
         0 1.2px 5px rgba(0,0,0,0.5),
-        inset 0 0 2.4px rgba(0, 0, 0, 0.2);
-
-    /*  */
-    
+        inset 0 0 2.4px rgba(0, 0, 0, 0.2);    
 }
 
 .slider:before {
