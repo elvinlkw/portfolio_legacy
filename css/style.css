@@ -262,7 +262,8 @@ body.menu-opened .burger span::after {
 
 #about-me-writeup{
     width:100%;
-    color: #1e87d6;
+    /* color: #1e87d6; */
+    color: rgba(253, 253, 253, 0.9);
     overflow:auto;
 }
 
