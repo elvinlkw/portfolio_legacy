@@ -4,6 +4,10 @@ body{
     font-family: 'Ubuntu', 'Lato', helvetica, Arial, sans-serif;
 }
 
+body.menu-opened {
+    overflow: hidden;
+}
+
 h1, h2, h3{
     margin:0;
     padding:0;
@@ -104,7 +108,7 @@ body.menu-opened .burger span::after {
     top:0; left:0;
     right:0; bottom:0;
     z-index: 998;
-    opacity:0.95;
+    opacity:0.97;
 }
 
 #nav-img{
@@ -198,28 +202,41 @@ body.menu-opened .burger span::after {
     display:inline-block;
 }
 
-#lp-contact-wrapper{
+#lp-contact-wrapper {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
     border-top: 1px #d3d3d3 solid;
-    padding-top: 1rem;
-    position:relative;
-    margin: 0 auto;
-    height: auto;
-    width:70vw;
-    display:block;
 }
 
-.lp-contact{
-    display:flex;
+#lp-contact-wrapper .lp-contact-header {
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.lp-text{
-    width: 20%;
-    font-size:1rem;
-    margin: 0 auto;
-    padding-bottom:1rem;
+#lp-contact-wrapper .lp-contact {
+    font-size: 15px;
+    font-weight: 400;
 }
 
-.lp-text a{
+#lp-contact-wrapper .lp-contact,
+#lp-contact-wrapper .lp-contact-header {
+    display: flex;
+    width: 100%;
+    padding: 8px 0 0 0;
+}
+
+#lp-contact-wrapper .lp-contact li,
+#lp-contact-wrapper .lp-contact-header li {
+    width: 25%;
+    text-align: center;
+}
+
+#lp-contact-wrapper .lp-contact-header li i {
+    margin-right: 5px;
+}
+
+#lp-contact-wrapper .lp-contact li a {
     text-decoration: underline;
 }
 
@@ -430,12 +447,6 @@ input:checked + .slider:after{
     color:#ff6e00;
     padding-left: 2.5vw;
     display:block;
-}
-
-#skill-arrow-content-mobile{
-    color:#ff6e00;
-    padding-left: 2.5vw;
-    display:none;
 }
 
 .content-bolded{
@@ -821,12 +832,29 @@ input:checked + .slider:after{
         display: none;
     }
 
-    #lp-contact-wrapper{
-        display:none;
+    #lp-contact-wrapper {
+        display: flex;
+        flex-direction: row;
     }
 
-    #lp-contact-wrapper-mobile{
-        display:block;
+    #lp-contact-wrapper .lp-contact-header,
+    #lp-contact-wrapper .lp-contact {
+        flex-direction: column;
+        width: 50%;
+        padding: 0;
+    }
+
+    #lp-contact-wrapper .lp-contact-header li,
+    #lp-contact-wrapper .lp-contact li {
+        display: inherit;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px #d3d3d3 solid;
+        font-size: 15px;
+    }
+
+    #lp-contact-wrapper .lp-contact-header li i {
+        width: 1em;
     }
 
     #mobile-contact-table{
@@ -888,18 +916,9 @@ input:checked + .slider:after{
         font-size: 0.75em;
     }
 
-    .skill-arrow-content > p,
-    #skill-arrow-content-mobile > p{
+    .skill-arrow-content > p {
         font-size: 0.75em;
         padding-left: 2em;
-    }
-
-    .hidden-mobile{
-        display:none;
-    }
-
-    #skill-arrow-content-mobile{
-        display: block;
     }
 
     /* Projects Section */
