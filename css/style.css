@@ -576,7 +576,7 @@ input:checked + .slider:after{
 .content-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .modal-content-link{
@@ -587,6 +587,7 @@ input:checked + .slider:after{
     height: 20rem;
     margin-top: 1rem;
     border: 2px lightgray solid;
+    margin-right: 3rem;
 }
 
 .modal-content-link:hover{
