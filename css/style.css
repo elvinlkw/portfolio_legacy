@@ -48,10 +48,8 @@ hr{
 
 .burger{
     position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 3rem;
-    margin-right: 6rem;
+    top: 3rem;
+    right: 6rem;
     z-index: 999;
     cursor: pointer;
 }
@@ -544,7 +542,7 @@ input:checked + .slider:after{
     margin-top: 4rem;
 }
 
-#proj-github-icon{
+#project-github-container #proj-github-icon{
     width: 2rem;
     height: 2rem;
     margin-right: 0.8rem;
@@ -553,6 +551,11 @@ input:checked + .slider:after{
     top:50%;
     transform: translateY(-50%);
     filter: invert(1);
+    transition: all 0.25s ease-in-out;
+}
+
+#project-github-container:hover #proj-github-icon {
+    transform: translateY(-50%) scale(1.2, 1.2);
 }
 
 #proj-github-text{
@@ -691,6 +694,10 @@ input:checked + .slider:after{
     -ms-transition:auto;
 }
 
+.contact-innerbox a {
+    color: #066AA3;
+}
+
 .front{
     position:absolute;
     top:0; left:0;
@@ -816,6 +823,10 @@ input:checked + .slider:after{
 
 
 @media screen and (max-width:768px){
+    .burger {
+        top: 30px;
+        right: 30px;
+    }
 
     #lp-landing-page{
         align-items: center;
@@ -826,16 +837,21 @@ input:checked + .slider:after{
         flex-direction: column;
     }
     
-    #lp-logo{
+    #lp-header-container #lp-logo{
         margin:2em auto;
-        width: 30%;
-        height: 30%;
+        width: 200px;
+        height: 200px;
     }
 
     #lp-header-wrapper{
-        margin: 0 auto;
+        /* margin: 0 auto; */
+        margin: 0;
         padding-bottom: 3em;
         line-height: 2.4em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
     }
 
     #lp-header-wrapper > h1{
@@ -965,7 +981,8 @@ input:checked + .slider:after{
     .wrapper-project{
         width: 10em;
         height: 10em;
-        margin-bottom: 2em;
+        border-color: gray;
+        margin: 0 0 2em 0;
     }
 
     .project-category{
@@ -975,11 +992,14 @@ input:checked + .slider:after{
 
     .project-cat-img{
         width: 7em;
+        filter: grayscale(0);
+        transform: translate(-50%, -50%) scale(1,1);
     }
 
     .wrapper-project-text{
         width: 10em;
         height: 3em;
+        background: lightblue;
     }
 
     .modal-content{
@@ -1028,6 +1048,9 @@ input:checked + .slider:after{
     }
 
     /* Contact Section */
+    #section-contact {
+        padding-bottom: 5rem;
+    }
 
     #contact-box-container{
         position:relative;
