@@ -1,3 +1,8 @@
+:root {
+    --button-success: #28A745;
+    --button-info: #026AA4;
+}
+
 body{
     display:block;
     height:100vh;
@@ -603,7 +608,7 @@ input:checked + .slider:after{
     display:flex;
     flex-direction: column;
     width: 20rem;
-    height: 20rem;
+    min-height: 20rem;
     margin-top: 1rem;
     border: 2px lightgray solid;
     margin-right: 3rem;
@@ -636,10 +641,35 @@ input:checked + .slider:after{
 
 .project-content-description{
     width: 100%;
-    height:5rem;
+    padding: 5px 0;
     text-align: center;
     line-height: 5rem;
     position: relative;
+}
+
+.project-content-links {
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 0;
+}
+
+.project-content-links > a {
+    border: 1px rgba(0,0,0,0.5) solid;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--button-success);
+    color: #fff;
+}
+
+.project-content-links > a:first-child {
+    margin-bottom: 5px;
+    background-color: var(--button-info);
 }
 
 #proj-desc-html{
@@ -1011,9 +1041,14 @@ input:checked + .slider:after{
         font-size: 0.8em;
     }
 
+    .content-box {
+        justify-content: space-between;
+    }
+
     .modal-content-link{
-        height: 8em;
         width: 8em;
+        min-height: auto;
+        margin: 0;
     }
 
     .project{
@@ -1024,6 +1059,16 @@ input:checked + .slider:after{
     .project-content-description{
         height: 0;
         display:none;
+    }
+
+    .project-content-links > a {
+        font-size: 9px;
+        width: 80%;
+        margin: 0 !important;
+    }
+
+    .project-content-links > a:nth-child(2) {
+        display: none;
     }
 
     .project-technology{
