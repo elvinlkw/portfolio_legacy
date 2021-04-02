@@ -458,7 +458,13 @@ input:checked + .slider:after{
 
 .content-bolded{
     font-weight:bold;
-    color:#0d94a3;
+    /* color:#0d94a3; */
+    /* color: #007acc; */
+    color: #52BDD0;
+}
+
+.strongest {
+    border-bottom: 2px solid #ff6e00;
 }
 
 /* Projects Page Section */
