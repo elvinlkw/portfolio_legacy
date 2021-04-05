@@ -728,6 +728,7 @@ input:checked + .slider:after{
     backface-visibility:hidden;
     -ms-backface-visibility:hidden;
     -ms-transition:auto;
+    transition: auto;
 }
 
 .contact-innerbox a {
@@ -832,6 +833,22 @@ input:checked + .slider:after{
     text-decoration:underline;
     color:darkblue;
     margin:0;
+}
+
+@media (min-width: 767px) {
+    #lp-logo {
+        animation: logo-rotate 30s infinite linear;
+        -webkit-animation: logo-rotate 30s infinite linear;
+        -moz-animation: logo-rotate 30s infinite linear;
+        -ms-animation: logo-rotate 30s infinite linear;
+    }
+
+    #lp-logo.paused {
+        animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+    }
 }
 
 @media screen and (max-width: 1400px) and (min-width:768px){
@@ -1132,5 +1149,15 @@ input:checked + .slider:after{
     .back{
         transform:rotateX(0deg);
         -ms-transform:rotateX(0deg);
+    }
+}
+
+@keyframes logo-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

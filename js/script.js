@@ -98,6 +98,14 @@ $(document).ready(function(){
         loop: true
     });
 
+    $('#lp-logo').hover(function() {
+        // On Hover
+        $(this).addClass('paused');
+    }, function() {
+        // on remove hover
+        $(this).removeClass('paused');
+    })
+
     //Smooth-Scrolling Code
     // Select all links with hashes
     $('a[href*="#"]')
